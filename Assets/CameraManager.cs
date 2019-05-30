@@ -19,8 +19,31 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float horizontalVelocity = focusTarget.velocity.x;
+        float verticalVelocity = focusTarget.velocity.y;
         
-        transform.position = new Vector3(focusTarget.transform.position.x,focusTarget.transform.position.y,-10f);
+        // Clamp the offset that the camera is horizontally
+        if(horizontalVelocity > maxHorizontalOffset)
+        {
+            horizontalVelocity = maxHorizontalOffset;
+        }
+        else if(horizontalVelocity < -maxHorizontalOffset)
+        {
+            horizontalVelocity = -maxHorizontalOffset;
+        }
+
+        // Clamp the offset that the camera is vertical
+        if(verticalVelocity > maxVerticalOffset)
+        {
+            verticalVelocity = maxVerticalOffset;
+        }
+        else if(verticalVelocity < -maxVerticalOffset)
+        {
+            verticalVelocity = -maxVerticalOffset;
+        }
+        
+        transform.position = new Vector3(focusTarget.transform.position.x + horizontalVelocity ,
+                                         focusTarget.transform.position.y +  verticalVelocity,
+                                         -10f);
     }
 }
