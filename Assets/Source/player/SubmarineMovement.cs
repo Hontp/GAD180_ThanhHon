@@ -13,7 +13,10 @@ public class SubmarineMovement : MonoBehaviour
     // Between 0-1f
     public float torqueDampen;
     public float turnDampening;
-    
+
+    // THIS SHOULD BE IN SCREENWRAPPER
+    public float stageSize;
+
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -55,6 +58,21 @@ public class SubmarineMovement : MonoBehaviour
         }
 
 
+
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(col.transform.name);
+        if (col.transform.CompareTag("ScreenWrapperL"))
+        {
+            transform.position = new Vector3(transform.position.x + stageSize, transform.position.y, transform.position.z);
+        }
+        if (col.transform.CompareTag("ScreenWrapperR"))
+        {
+            transform.position = new Vector3(transform.position.x - stageSize, transform.position.y, transform.position.z);
+        }
+    }
+
 
 }
