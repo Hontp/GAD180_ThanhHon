@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Submarine : Ship
 {
-    
-
     public override void Initialize()
     {
         // load sprites for sub components
-        SetSprite("hull", "Art/hull_1");
-        SetSprite("propulsion", "Art/Prop_1");
-        SetSprite("weapon", "Art/Front_1");
+        SetSprite("hull", "Art/sub_hull");
+        SetSprite("weapon", "Art/sub_weapon");
+        SetSprite("propulsion", "Art/sub_propulsion");
 
         // scale the submarine
-      //  transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+        transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
         base.Initialize();
     }
