@@ -312,10 +312,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7647028903974765616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1cbe9ab241fbe4f89675c30dc9376d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1699019ec73f4e1438a51a6e06d43fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipHP: 100
+  shipHP: 0
 --- !u!50 &3395222390615757686
 Rigidbody2D:
   serializedVersion: 4
@@ -346,15 +346,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7647028903974765616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878fd880d44038c44ae8d67b0cfde29b, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c8966179753bb40bc804f43145d155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  torque: 1
-  maxAngularVelocity: 1
-  maxSpeed: 1
-  torqueDampen: 1
-  turnDampening: 1
+  speed: 3
+  torque: 0.75
+  maxAngularVelocity: 90
+  maxSpeed: 10
+  torqueDampen: 0.1
+  turnDampening: 2
 --- !u!1 &8247451399430219395
 GameObject:
   m_ObjectHideFlags: 0
