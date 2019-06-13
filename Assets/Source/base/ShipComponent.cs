@@ -6,10 +6,83 @@
 /// </summary>
 public class ShipComponent
 {
+    private GameObject componentObject;
     private Transform componentTransform;
     private SpriteRenderer componentRenderer;
     private Sprite componentSprite;
 
+
+    [SerializeField]
+    private int health;
+
+    [SerializeField]
+    private int speed;
+
+    [SerializeField]
+    private int power;
+
+    [SerializeField]
+    private int handling;
+
+    /// <summary>
+    /// get / set health 
+    /// </summary>
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
+        set
+        {
+            health = value;
+        }
+    }
+
+    /// <summary>
+    /// get /set speed 
+    /// </summary>
+    public int Speed
+    {
+        get
+        {
+            return speed;
+        }
+        set
+        {
+            speed = value;
+        }
+    }
+
+    /// <summary>
+    /// get /set power
+    /// </summary>
+    public int Power
+    {
+        get
+        {
+            return power;
+        }
+        set
+        {
+            power = value;
+        }
+    }
+
+    /// <summary>
+    /// get / set handling
+    /// </summary>
+    public int Handling
+    {
+        get
+        {
+            return handling;
+        }
+        set
+        {
+            handling = value;
+        }
+    }
 
     /// <summary>
     /// get /set the ship component transform
@@ -23,6 +96,21 @@ public class ShipComponent
         set
         {
             componentTransform = value;
+        }
+    }
+
+    /// <summary>
+    /// get set the component object
+    /// </summary>
+    public GameObject ComponentObject
+    {
+        get
+        {
+            return componentObject;
+        }
+        set
+        {
+            componentObject = value;
         }
     }
 

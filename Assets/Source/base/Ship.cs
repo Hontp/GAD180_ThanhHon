@@ -23,30 +23,33 @@ public class Ship : MonoBehaviour
             if (shipComponents.ContainsKey(part.name))
                 break;
                           
-            if (part.name  == "hull")
+            if (part.name  == "weapon")
             {
                 ShipComponent comp = new ShipComponent
                 {
-                    ComponentTransform = part,
-                    ComponentRenderer = part.GetComponent<SpriteRenderer>()
-                };
-
-                shipComponents.Add("hull", comp);
-            }
-            else if (part.name == "weapon")
-            {
-                ShipComponent comp = new ShipComponent
-                {
+                    ComponentObject = part.gameObject,
                     ComponentTransform = part,
                     ComponentRenderer = part.GetComponent<SpriteRenderer>()
                 };
 
                 shipComponents.Add("weapon", comp);
             }
+            else if (part.name == "hull")
+            {
+                ShipComponent comp = new ShipComponent
+                {
+                    ComponentObject = part.gameObject,
+                    ComponentTransform = part,
+                    ComponentRenderer = part.GetComponent<SpriteRenderer>()
+                };
+
+                shipComponents.Add("hull", comp);
+            }
             else if ( part.name == "propulsion")
             {
                 ShipComponent comp = new ShipComponent
                 {
+                    ComponentObject = part.gameObject,
                     ComponentTransform = part,
                     ComponentRenderer = part.GetComponent<SpriteRenderer>()
                 };
