@@ -12,7 +12,7 @@ public class Submarine : Ship
         SetSprite("propulsion", "Art/shipParts/Prop_1");
 
         // scale the submarine
-        transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+       // transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
         base.Initialize();
     }

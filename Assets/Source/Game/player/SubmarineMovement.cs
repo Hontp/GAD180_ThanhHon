@@ -13,6 +13,8 @@ public class SubmarineMovement : MonoBehaviour
     // Between 0-1f
     public float torqueDampen;
     public float turnDampening;
+
+    public float worldWidth;
     
     private Rigidbody2D rb;
 
@@ -55,6 +57,22 @@ public class SubmarineMovement : MonoBehaviour
         }
 
 
+    }
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        Debug.Log(c.transform.tag);
+        if(c.transform.tag == "ScreenWrapperR" )
+        {
+            Debug.Log("A");
+            transform.position = new Vector3(transform.position.x - worldWidth,transform.position.y,transform.position.z );
+            Debug.Log(transform.position.ToString());
+        }
+        if(c.transform.tag == "ScreenWrapperL")
+        {
+            Debug.Log("B");
+            transform.position = new Vector3(transform.position.x + worldWidth,transform.position.y,transform.position.z );
+        }
     }
 
 }

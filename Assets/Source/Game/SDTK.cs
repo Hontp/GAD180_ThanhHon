@@ -5,6 +5,8 @@
 /// </summary>
 public class SDTK : MonoBehaviour
 {
+
+    public CameraManager cm;
     // the player container object
     GameObject player = null;
 
@@ -15,6 +17,7 @@ public class SDTK : MonoBehaviour
         Utilities.Instance.CreateGameObject("player", "Prefabs/Submarine_Test");
         Utilities.Instance.InstantiateGameObject(ref player, "player");
 
+        cm.focusTarget = player.GetComponent<Rigidbody2D>();
     }
 
 }
