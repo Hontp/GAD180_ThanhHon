@@ -8,13 +8,20 @@ public class Missile : Projectile
     protected override void Start()
     {
         base.Start();
-        base.damage = 1f;
+        transform.parent = null;
+        rb.velocity = playerVelocity;
+
     }
 
     protected override void Update()
     {
         base.Update();
-        base.rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+        rb.AddForce(transform.right * -speed, ForceMode2D.Force);
+
+        if(Vector2.Distance(transform.position,startPosition) > distance)
+        {
+            projectileDestroy();
+        }
 
     }
 

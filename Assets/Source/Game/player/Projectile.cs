@@ -8,16 +8,22 @@ using UnityEngine;
 public abstract class Projectile : MonoBehaviour
 {
 
-    protected Rigidbody2D rb;
+    public Rigidbody2D rb;
     SubmarineFire parent;
     private float timer;
     private float timeShot;
-    private float lifetime;
-    protected float damage;
+    public float lifetime;
+    public float damage;
+    protected Vector2 playerVelocity;
+    
+    public float distance;
+
+    public Vector2 startPosition;
     
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        startPosition = (Vector2) transform.position; 
         rb = GetComponent<Rigidbody2D>();
         timeShot = Time.time;
     }
@@ -25,6 +31,11 @@ public abstract class Projectile : MonoBehaviour
     public void setParent(SubmarineFire parent)
     {
         this.parent = parent; 
+    }
+
+    public void setPlayerVelocity(Vector2 playerVel)
+    {
+        playerVelocity = playerVel;
     }
 
     // Update is called once per frame
