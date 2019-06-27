@@ -16,11 +16,13 @@ public class SubmarineMovement : MonoBehaviour
 
     public float worldWidth;
     
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
+    private SubmarineFire sf;
 
     // Start is called before the first frame update
     void Start()
     {
+        sf = GetComponent<SubmarineFire>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -28,6 +30,7 @@ public class SubmarineMovement : MonoBehaviour
     void Update()
     {
         Movement();
+        Fire();
     }
 
     private void Movement()
@@ -56,13 +59,20 @@ public class SubmarineMovement : MonoBehaviour
             rb.AddTorque(-torque,ForceMode2D.Impulse);
         }
 
+    }
 
+    private void Fire()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            sf.fireProjectile(rb.velocity);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D c)
     {
         Debug.Log(c.transform.tag);
-        if(c.transform.tag == "ScreenWrapperR" )
+        if(c.transform.tag == "ScreenWrapperR")
         {
             Debug.Log("A");
             transform.position = new Vector3(transform.position.x - worldWidth,transform.position.y,transform.position.z );
