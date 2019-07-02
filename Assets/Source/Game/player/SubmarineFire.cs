@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SubmarineFire : MonoBehaviour
 {
+    
+    [Header("Projectile Options")]
     public Transform firingPoint;
     // list of the possible projectiles this can fire
     public GameObject[] projectiles;
@@ -14,6 +16,7 @@ public class SubmarineFire : MonoBehaviour
     
     public int projectileIndex;
 
+    [Header("Firing Timers")]
     public float fireCooldown;
     public float fireCooldownLength;
 

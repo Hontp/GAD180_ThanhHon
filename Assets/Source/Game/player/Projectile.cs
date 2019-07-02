@@ -53,4 +53,14 @@ public abstract class Projectile : MonoBehaviour
         Destroy(gameObject);
         parent.reduceProjCount();
     }
+
+    protected virtual void OnCollisionEnter2D(Collision2D collisionInfo)
+    {
+        if(collisionInfo.transform.CompareTag("Player"))
+        {
+            //TODO: decrease the health of the player
+            projectileDestroy();
+        }
+    }
+
 }

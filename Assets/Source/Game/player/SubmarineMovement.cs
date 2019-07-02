@@ -19,9 +19,12 @@ public class SubmarineMovement : MonoBehaviour
     public Rigidbody2D rb;
     private SubmarineFire sf;
 
+    private Submarine s;
+
     // Start is called before the first frame update
     void Start()
     {
+        s = GetComponent<Submarine>();
         sf = GetComponent<SubmarineFire>();
         rb = GetComponent<Rigidbody2D>();
     }
