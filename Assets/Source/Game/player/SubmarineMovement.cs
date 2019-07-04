@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.SceneManagement;
+
 
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class SubmarineMovement : MonoBehaviour
 {
+
+    public string sceneName;
+
     public float speed;
     public float torque;
     public float maxAngularVelocity;
@@ -43,6 +48,11 @@ public class SubmarineMovement : MonoBehaviour
     {
         Movement();
         Fire();
+
+        if(player.GetButtonLongPressDown("Reset"))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
     private void Movement()
