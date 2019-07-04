@@ -24,7 +24,7 @@ public class Missile : Projectile
     }
 
     // Missiles are right aligned
-    protected override void projectileDestroy()
+    public override void projectileDestroy()
     {
         base.projectileDestroy();
     }

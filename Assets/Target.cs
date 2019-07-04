@@ -26,6 +26,12 @@ public class Target : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
+            Projectile p = other.GetComponent<Projectile>();
+            if(p != null)
+            {
+                p.projectileDestroy();
+            }
+
             Destroy(gameObject);
             Instantiate(targetDestroy,transform.position,transform.rotation);
         }
