@@ -7,6 +7,8 @@ TagManager:
   - ScreenWrapper
   - ScreenWrapperL
   - ScreenWrapperR
+  - Projectile
+  - Target
   layers:
   - Default
   - TransparentFX

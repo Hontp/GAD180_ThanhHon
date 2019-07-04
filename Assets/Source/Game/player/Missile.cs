@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Missile : Projectile
@@ -26,7 +24,7 @@ public class Missile : Projectile
     }
 
     // Missiles are right aligned
-    protected override void projectileDestroy()
+    public override void projectileDestroy()
     {
         base.projectileDestroy();
     }
