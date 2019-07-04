@@ -25,13 +25,13 @@ public class BreakTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float normalizedLife = (Time.time - lifeStart / lifetime);
+        float normalizedLife = (Time.time  - lifeStart) / (lifetime);
         //shrinking effect
         float scale = 1f - normalizedLife;
         if(scale < 0 )
         {
-          //  Destroy(gameObject);
+            Destroy(gameObject);
         }
-        transform.localScale *= scale; 
+        transform.localScale = new Vector3(scale,scale,0.1f); 
     }
 }
