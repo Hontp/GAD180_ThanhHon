@@ -5,6 +5,15 @@ public class Propulsion : ShipComponent
     [SerializeField]
    private Engine subEngine;
 
+
+
+    void Start()
+    {
+        reload();
+    }
+
+
+
     public Engine SubEngine
     {
         get

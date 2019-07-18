@@ -10,7 +10,9 @@ public class ShipComponent
     private Transform componentTransform;
     private SpriteRenderer componentRenderer;
     private Sprite componentSprite;
+    public ComponentStats comp;
 
+    [Header("Debugging Only")]
 
     [SerializeField]
     private int health;
@@ -23,6 +25,14 @@ public class ShipComponent
 
     [SerializeField]
     private int handling;
+
+    public void reload()
+    {
+        Health = comp.health;
+        Speed = comp.speed;
+        Power = comp.power;
+        Handling = comp.handling;
+    }
 
     /// <summary>
     /// get / set health 
