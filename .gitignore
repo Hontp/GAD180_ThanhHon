@@ -3,6 +3,7 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Ll]ogs/
+/.[vV]s/
 # Don't remove this because we need this for the preferences of the unity project 
 #/[Pp]rojectSettings/
 
