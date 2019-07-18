@@ -335,6 +335,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipHP: 0
+  hullStats:
+  - {fileID: 11400000, guid: 70c9a9ce7e0cfc64791567af7c4da2d1, type: 2}
+  - {fileID: 11400000, guid: d7f22abf43d02924e86974dafa82f582, type: 2}
+  - {fileID: 11400000, guid: 6e447f6e7809ddc468fb6ff51b4e6173, type: 2}
+  weaponStats:
+  - {fileID: 11400000, guid: ecbf5cf6dbac04b498d1a1a486be7eb0, type: 2}
+  - {fileID: 11400000, guid: f04408c9d03648842b8a2e35bf1e3502, type: 2}
+  - {fileID: 11400000, guid: 493b42fb0749a1542bb1cad7d9ba6f3b, type: 2}
+  propulsionStats:
+  - {fileID: 11400000, guid: 30cf0bca0b3547c42a693b5b530f8b7c, type: 2}
+  - {fileID: 11400000, guid: c51af2b62faff824dacff5acf831441d, type: 2}
+  - {fileID: 11400000, guid: 2562d87d65aa6074ba0e358f4682c8d7, type: 2}
+  health: 0
+  speed: 0
+  power: 0
+  handling: 0
 --- !u!50 &178202349787127734
 Rigidbody2D:
   serializedVersion: 4
@@ -369,14 +385,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Scenes/Scene K
+  worldWidth: 50
+  rb: {fileID: 0}
   speed: 4
   torque: 0.5
   maxAngularVelocity: 90
   maxSpeed: 15
   torqueDampen: 0.2
   turnDampening: 2
-  worldWidth: 50
-  rb: {fileID: 0}
+  maxSpeedStatMultiplier: 0.75
+  speedStatMultiplier: 0.75
+  maxAngularVelocityStatMultiplier: 0.75
+  torqueStatMultiplier: 0.75
 --- !u!114 &559624937535590661
 MonoBehaviour:
   m_ObjectHideFlags: 0

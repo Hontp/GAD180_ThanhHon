@@ -12,20 +12,30 @@ public class SubmarineMovement : MonoBehaviour
 
     public string sceneName;
 
-    public float speed;
-    public float torque;
-    public float maxAngularVelocity;
-    public float maxSpeed;
-    // Between 0-1f
-    public float torqueDampen;
-    public float turnDampening;
-
     public float worldWidth;
     
     public Rigidbody2D rb;
     private SubmarineFire sf;
     private Player player;
     private Submarine s;
+
+    [Header("These will be modified by StatMultiplier")]
+    public float speed;
+    public float torque;
+    public float maxAngularVelocity;
+    public float maxSpeed;
+
+    [Header("Not these though yet")]
+    // Between 0-1f
+    public float torqueDampen;
+    public float turnDampening;
+
+    [Header("Stat Multipliers")]
+    public float maxSpeedStatMultiplier;
+    public float speedStatMultiplier;
+    public float maxAngularVelocityStatMultiplier;
+    public float torqueStatMultiplier;
+
     [Header("Particle Effects")]
     private ParticleSystem ps;
     private float emissionCount;
@@ -53,6 +63,8 @@ public class SubmarineMovement : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName);
         }
+
+        previousVelocity = rb.velocity;
     }
 
     private void Movement()
@@ -89,6 +101,23 @@ public class SubmarineMovement : MonoBehaviour
             rb.AddTorque(-torque * horizontal ,ForceMode2D.Impulse);
         }
 
+    }
+
+    public void setSpeed(int speedIn)
+    {
+        //adding 2 because the speedIn value can be negative (thanks sam)
+        maxSpeed = maxSpeedStatMultiplier * (speedIn + 5);
+        speed = speedStatMultiplier * (speedIn + 5);
+    }
+
+    public void setHandling(int handlingIn)
+    {
+        maxAngularVelocity = maxAngularVelocityStatMultiplier * (handlingIn + 5);
+        torque = torqueStatMultiplier * (handlingIn + 5);
+        torqueDampen = ((torqueDampen + (handlingIn+5) * 0.1f) < 2f) ? torqueDampen + (handlingIn + 5) * 0.1f : 2;
+        turnDampening = ((torqueDampen + (handlingIn + 5) * 0.1f) < 3f) ? torqueDampen + (handlingIn + 5) * 0.1f : 3;
+        // should I change torque dampen here? TODO: check gamefeel
+        // torqueDampen ????
     }
 
     private void Fire()
