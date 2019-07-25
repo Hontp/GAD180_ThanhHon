@@ -40,6 +40,13 @@ public class SubmarineMovement : MonoBehaviour
     private ParticleSystem ps;
     private float emissionCount;
 
+    //SFX
+    public string InputSound;
+    int PlayerIsMoving;
+    
+    FMOD.Studio.EventInstance PlayPlayer_Prop;
+    FMOD.Studio.EventInstance PlayPlayer_PropStop;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +58,10 @@ public class SubmarineMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = Rewired.ReInput.players.GetPlayer(0);
+
+        //SFX
+        PlayPlayer_Prop = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_Prop");
+        PlayPlayer_Prop = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_PropStop");
     }
 
     // Update is called once per frame
@@ -64,7 +75,7 @@ public class SubmarineMovement : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         }
 
-        previousVelocity = rb.velocity;
+        //previousVelocity = rb.velocity;
     }
 
     private void Movement()
@@ -83,11 +94,13 @@ public class SubmarineMovement : MonoBehaviour
             rb.angularVelocity *= 1 - torqueDampen;
             var e = ps.emission;
             e.rateOverTime = ( emissionCount * thrust);
+            
         }
         else if( Mathf.Abs(horizontal) < deadZone )
         {
             // HARDCODED
             rb.angularVelocity *= 1 - torqueDampen/turnDampening;
+            
         }
         // Rotation Left
         if(horizontal < -deadZone && rb.angularVelocity < maxAngularVelocity)
@@ -99,6 +112,23 @@ public class SubmarineMovement : MonoBehaviour
         if(horizontal > deadZone && rb.angularVelocity > -maxAngularVelocity)
         {
             rb.AddTorque(-torque * horizontal ,ForceMode2D.Impulse);
+        }
+
+        //SFX
+        if (thrust > deadZone)
+        {
+           PlayerIsMoving = 1;
+           Debug.Log("Moving = True!");
+        }
+        else
+        {
+            PlayerIsMoving = 0;
+            Debug.Log("Moving = False!");
+        }
+
+        if (PlayerIsMoving > 0)
+        {
+            PlayPlayer_Prop.start();
         }
 
     }
