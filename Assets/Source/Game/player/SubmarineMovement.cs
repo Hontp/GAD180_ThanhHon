@@ -40,12 +40,6 @@ public class SubmarineMovement : MonoBehaviour
     private ParticleSystem ps;
     private float emissionCount;
 
-    //SFX
-    public string InputSound;
-    int PlayerIsMoving;
-    
-    FMOD.Studio.EventInstance PlayPlayer_Prop;
-    FMOD.Studio.EventInstance PlayPlayer_PropStop;
 
 
     // Start is called before the first frame update
@@ -59,9 +53,6 @@ public class SubmarineMovement : MonoBehaviour
 
         player = Rewired.ReInput.players.GetPlayer(0);
 
-        //SFX
-        PlayPlayer_Prop = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_Prop");
-        PlayPlayer_Prop = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_PropStop");
     }
 
     // Update is called once per frame
@@ -112,23 +103,6 @@ public class SubmarineMovement : MonoBehaviour
         if(horizontal > deadZone && rb.angularVelocity > -maxAngularVelocity)
         {
             rb.AddTorque(-torque * horizontal ,ForceMode2D.Impulse);
-        }
-
-        //SFX
-        if (thrust > deadZone)
-        {
-           PlayerIsMoving = 1;
-           Debug.Log("Moving = True!");
-        }
-        else
-        {
-            PlayerIsMoving = 0;
-            Debug.Log("Moving = False!");
-        }
-
-        if (PlayerIsMoving > 0)
-        {
-            PlayPlayer_Prop.start();
         }
 
     }
