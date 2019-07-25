@@ -64,7 +64,7 @@ public class SubmarineMovement : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         }
 
-        previousVelocity = rb.velocity;
+        //TODO: previousVelocity = rb.velocity;
     }
 
     private void Movement()
@@ -83,6 +83,7 @@ public class SubmarineMovement : MonoBehaviour
             rb.angularVelocity *= 1 - torqueDampen;
             var e = ps.emission;
             e.rateOverTime = ( emissionCount * thrust);
+
         }
         else if( Mathf.Abs(horizontal) < deadZone )
         {
