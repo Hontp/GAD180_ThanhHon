@@ -41,6 +41,7 @@ public class SubmarineMovement : MonoBehaviour
     private float emissionCount;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +52,7 @@ public class SubmarineMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = Rewired.ReInput.players.GetPlayer(0);
+
     }
 
     // Update is called once per frame
@@ -83,12 +85,13 @@ public class SubmarineMovement : MonoBehaviour
             rb.angularVelocity *= 1 - torqueDampen;
             var e = ps.emission;
             e.rateOverTime = ( emissionCount * thrust);
-
+            
         }
         else if( Mathf.Abs(horizontal) < deadZone )
         {
             // HARDCODED
             rb.angularVelocity *= 1 - torqueDampen/turnDampening;
+            
         }
         // Rotation Left
         if(horizontal < -deadZone && rb.angularVelocity < maxAngularVelocity)

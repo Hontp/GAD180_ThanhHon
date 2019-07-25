@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/FMod_SDTK/Metadata/Asset/{162d6691-99d7-439d-96eb-b7a5568c3db9}.xml.meta
 guid: 606c85d28a3bbaa4dae680eb9329ebfa
+=======
+guid: 0603d29448f160c46a1342b3b08ad9f3
+>>>>>>> 8352bf5b6b1b9d736ae657b296584c8b16750cb9:Assets/FMod_SDTK/Metadata/Asset/{162d6691-99d7-439d-96eb-b7a5568c3db9}.xml.meta
 TextScriptImporter:
   externalObjects: {}
   userData: 
