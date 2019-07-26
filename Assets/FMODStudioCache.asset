@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8614317309250655909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
 --- !u!114 &-8083813312602836244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +31,7 @@ MonoBehaviour:
   Path: event:/SFX/Hit_Phys
   guid: ed92676df5fb7c47aadb1e64cae44fa8
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -24,6 +40,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1000
 --- !u!114 &-7369363053847990081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &-7079685955276166372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,7 +102,7 @@ MonoBehaviour:
   Path: event:/SFX/Player_Prop
   guid: 993e85a090211d42ad6bc49565cd3f71
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -93,7 +125,7 @@ MonoBehaviour:
   Path: event:/SFX/Hit_Explo
   guid: 56a5385b4730164c9dc023043464e084
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -116,7 +148,7 @@ MonoBehaviour:
   Path: event:/SFX/UI_Finish
   guid: 3d8c7c5403a30e458b7dbd18a784b7b3
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -139,7 +171,7 @@ MonoBehaviour:
   Path: event:/SFX/Weap_Torp
   guid: 12b417eb73629e46bac20cf29b86ca14
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -162,7 +194,7 @@ MonoBehaviour:
   Path: event:/SFX/Player_Death
   guid: 098cbd54f3ca304d8732b1ec25dfad80
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -208,7 +240,7 @@ MonoBehaviour:
   Path: event:/SFX/Hit_Laser
   guid: 0f7ed7ac7d1e6b49b8213acb19cca05f
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -231,7 +263,7 @@ MonoBehaviour:
   Path: event:/SFX/Enemy_Prop
   guid: 0ec72b010420524fad2f7d667c2bceba
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -254,7 +286,7 @@ MonoBehaviour:
   Path: event:/SFX/Mine_Active
   guid: 966b4a3d3e9dc74f8f81bafb31331a4c
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -276,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 1155278964543928862}
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   EditorEvents:
   - {fileID: 7720654158579647554}
   - {fileID: -4154814480959663212}
@@ -297,10 +329,10 @@ MonoBehaviour:
   - {fileID: 8459646902120317898}
   - {fileID: -8083813312602836244}
   MasterBanks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   StringsBanks:
   - {fileID: 1155278964543928862}
-  stringsBankWriteTime: 636996785558332333
+  stringsBankWriteTime: 636997704941620737
   cacheVersion: 3
 --- !u!114 &1155278964543928862
 MonoBehaviour:
@@ -315,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMod_SDTK\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636996785558332333
+  lastModified: 636997704941620737
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -336,7 +368,7 @@ MonoBehaviour:
   Path: event:/SFX/Player_LowHP
   guid: 6b1ca186e7c79b4298a1839520ade326
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -359,7 +391,7 @@ MonoBehaviour:
   Path: event:/SFX/Weap_Bullet
   guid: a2af87ccb5563e41bd2f170a413bdaf3
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -367,6 +399,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 250
+--- !u!114 &4378647839373815647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Dev\GitHub\Subs-Dive-To-Kill\Assets\FMod_SDTK\Build\Desktop\Master Bank.bank
+  lastModified: 636997704941610737
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1612000
+  Exists: 1
 --- !u!114 &4830058762663899897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +433,7 @@ MonoBehaviour:
   Path: event:/SFX/Torp_Prop
   guid: 126a2aa7f527884dbe2f23e117f4e96c
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -405,7 +456,7 @@ MonoBehaviour:
   Path: event:/SFX/Weap_Laser
   guid: 3c78b61ebf96294c80934d439d419219
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -483,13 +534,13 @@ MonoBehaviour:
   Path: event:/AdapMusic/Combat
   guid: 6732bd9e3c9a4248b1f4c4ec6019554e
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 5148292321084376325}
-  - {fileID: 8565494109710269644}
+  - {fileID: -8614317309250655909}
+  - {fileID: -7079685955276166372}
   MinDistance: 0
   MaxDistance: 0
   Length: 9600
@@ -508,7 +559,7 @@ MonoBehaviour:
   Path: event:/Themes/Draft_MainTheme
   guid: 9448f7de1c8e5248a18500b95c76b298
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -531,7 +582,7 @@ MonoBehaviour:
   Path: event:/SFX/Mine_Track
   guid: b149bc49f6730147a24d04ad82f7592e
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -554,7 +605,7 @@ MonoBehaviour:
   Path: event:/SFX/Enemy_Death
   guid: 0aef9207115bd74f9a35f5345a93bb29
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -593,7 +644,7 @@ MonoBehaviour:
   Path: event:/SFX/UI_Click
   guid: 5532a20543eb98459de1f22ec9ace19d
   Banks:
-  - {fileID: 5651188049370546705}
+  - {fileID: 4378647839373815647}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
