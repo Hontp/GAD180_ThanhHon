@@ -17,6 +17,9 @@ public class SDTK : MonoBehaviour
         Utilities.Instance.CreateGameObject("player", "Prefabs/Submarine_Test");
         Utilities.Instance.InstantiateGameObject(ref player, "player");
 
+        // set the AI target to the player
+        transform.GetComponent<Skynet>().SetPlayer(player);
+
         cm.focusTarget = player.GetComponent<Rigidbody2D>();
     }
 

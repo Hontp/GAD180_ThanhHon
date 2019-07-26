@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7097488324561229122}
   - component: {fileID: 646972938}
   - component: {fileID: 646972937}
+  - component: {fileID: 8973966701008297515}
   m_Layer: 0
   m_Name: target
   m_TagString: Untagged
@@ -133,3 +134,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDestroy: {fileID: 1835377020815148102, guid: 63d39d6f452035043900c3cbc4adec6a,
     type: 3}
+--- !u!114 &8973966701008297515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097488324561229121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a07e8be4ae00db40ac2727dd010e03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 1
+  activeRange: 20
+  attackRange: 1
