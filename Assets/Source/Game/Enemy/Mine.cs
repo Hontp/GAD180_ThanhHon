@@ -5,8 +5,6 @@ using UnityEngine;
 public class Mine : Agent
 {
 
-
-
     [SerializeField]
     Aggro current;
 
@@ -15,13 +13,10 @@ public class Mine : Agent
 
 
     [SerializeField]
-    float activeRange;
+    float activeRange = 20f;
 
     [SerializeField]
     float attackRange = 1f;
-
-    [SerializeField]
-
 
     public override void Initialize()
     {
@@ -66,6 +61,4 @@ public class Mine : Agent
             Execute();
         }
     }
-
-   
 }
