@@ -2,10 +2,9 @@
 
 public class Agent : MonoBehaviour
 {
+    private Collider2D sensor;
 
     private DecisionTree<Behaviour> decisionTree = new DecisionTree<Behaviour>();
-
-    private Collider2D sensor;
 
     [SerializeField]
     private GameObject target;
@@ -32,19 +31,6 @@ public class Agent : MonoBehaviour
         Initialize();
     }
 
-    public DecisionTree<Behaviour> DataTree
-    {
-        get
-        {
-            return decisionTree;
-        }
-        set
-        {
-            decisionTree = value;
-        }
-    }
-    
-
     public GameObject Target
     {
         get
@@ -54,6 +40,18 @@ public class Agent : MonoBehaviour
         set
         {
             target = value;
+        }
+    }
+
+    public DecisionTree<Behaviour> DecisionTree
+    {
+        get
+        {
+            return decisionTree;
+        }
+        set
+        {
+            decisionTree = value;
         }
     }
 

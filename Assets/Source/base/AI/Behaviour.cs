@@ -17,20 +17,11 @@ public abstract class Behaviour
 
     protected Vector3 heading = default;
     protected Vector3 direction = default;
+    protected float dist = 0;
 
     public void setAgent(Agent driver)
     {
         this.agent = driver;
-    }
-
-    public void setRange(float val)
-    {
-        detectionRange = 0;
-    }
-
-    public float Distance()
-    {
-         return heading.magnitude;
     }
 
     public bool CheckRange()
@@ -47,9 +38,64 @@ public abstract class Behaviour
 
     public Vector2 Direction()
     {
-        return heading / Distance();
+        return heading / (heading.magnitude);
     }
 
-    public virtual void Execute(ref Behaviour behaviour, Transform target) { }
-    public virtual bool checkBehaviour() { return false; }
+    public string BehaviourName
+    {
+        get
+        {
+            return Name;
+        }
+        set
+        {
+            Name = value;
+        }
+    }
+    public float DetectionRange
+    {
+        get
+        {
+            return detectionRange;
+        }
+        set
+        {
+            detectionRange = value;
+        }
+    }
+
+    public float Distance
+    {
+        get
+        {
+            return dist;
+        }
+        set
+        {
+            dist = value;
+        }
+    }
+
+    public virtual void Execute(ref Behaviour behaviour, Transform target)
+    {
+        dist = Vector2.Distance(target.transform.position, agent.transform.position);
+
+        if (dist < detectionRange)
+        {
+            if (dist <= attackRange)
+                agent.Attack();
+            else
+                agent.Move(target.position, dist);
+        }
+    }
+
+    public virtual bool checkBehaviour()
+    {
+        if (agent.GetComponent<SpriteRenderer>().isVisible)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
