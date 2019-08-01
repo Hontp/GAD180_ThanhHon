@@ -35,14 +35,5 @@ public class Target : MonoBehaviour
             Destroy(gameObject);
             Instantiate(targetDestroy,transform.position,transform.rotation);
         }
-
-        
-        if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            Utilities.Instance.GetCollection["player"].GetComponent<Submarine>().ShipsHealth -= 25f;
-            Instantiate(targetDestroy, transform.position, transform.rotation);
-        }
-        
     }
 }

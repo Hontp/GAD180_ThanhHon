@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8413348451101537935}
   m_Layer: 0
   m_Name: hull
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1663963472529973173}
   m_Layer: 0
   m_Name: propulsion
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1699019ec73f4e1438a51a6e06d43fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipHP: 100
+  shipHP: 0
   hullStats:
   - {fileID: 11400000, guid: 70c9a9ce7e0cfc64791567af7c4da2d1, type: 2}
   - {fileID: 11400000, guid: d7f22abf43d02924e86974dafa82f582, type: 2}
@@ -351,9 +351,6 @@ MonoBehaviour:
   speed: 0
   power: 0
   handling: 0
-  ship: 2
-  hull: 2
-  prop: 2
 --- !u!50 &178202349787127734
 Rigidbody2D:
   serializedVersion: 4
@@ -432,7 +429,7 @@ GameObject:
   - component: {fileID: 5581509267621685437}
   m_Layer: 0
   m_Name: weapon
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
