@@ -334,7 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1699019ec73f4e1438a51a6e06d43fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipHP: 0
   hullStats:
   - {fileID: 11400000, guid: 70c9a9ce7e0cfc64791567af7c4da2d1, type: 2}
   - {fileID: 11400000, guid: d7f22abf43d02924e86974dafa82f582, type: 2}
@@ -351,6 +350,9 @@ MonoBehaviour:
   speed: 0
   power: 0
   handling: 0
+  ship: 2
+  hull: 2
+  prop: 2
 --- !u!50 &178202349787127734
 Rigidbody2D:
   serializedVersion: 4
