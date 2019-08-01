@@ -6,9 +6,9 @@ public class Ship : MonoBehaviour
     // stores the components for all ship parts
     private  Dictionary<string, ShipComponent> shipComponents = new Dictionary<string, ShipComponent>();
 
-    //ships HP
-    [SerializeField]
-    private float shipHP = 0;
+    //ships HP 
+    
+    private float shipHP;
 
     /// <summary>
     /// this start method is private, it initializes the all ships parts renderers, pariticle systems 
@@ -176,6 +176,7 @@ public class Ship : MonoBehaviour
                 renderer.Value.ComponentRenderer.sprite = shipComponents[renderer.Key].ComponentSprite;
             }
         }
+
     }
 
 }
