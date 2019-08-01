@@ -21,10 +21,37 @@ public class Aggro : Behaviour
         attackRange = attkRange;
         agent = driver;
     }
- 
+   
     public override void Execute(ref Behaviour behaviour, Transform target)
     {
-        
+        float dist = Vector2.Distance(target.transform.position, agent.transform.position);
+
+        if (!checkBehaviour())
+            return;
+
+        if ( dist >= detectionRange)
+        {
+            agent.Move(target.position, dist);
+        }
+        else if ( dist < detectionRange)
+        {
+            if (dist <= attackRange)
+                agent.Attack();
+            else
+                agent.Move(target.position, dist);
+        }
+
         base.Execute(ref behaviour, target); 
+    }
+
+    public override bool checkBehaviour()
+    {
+        if (agent.GetComponent<SpriteRenderer>().isVisible)
+        {
+            return true;
+        }
+
+        return false;
+
     }
 }

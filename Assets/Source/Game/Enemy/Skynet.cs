@@ -9,6 +9,7 @@ public class Skynet : MonoBehaviour
 
     public List<GameObject> enmenies = new List<GameObject>();
 
+
     public void SetPlayer( GameObject target)
     {
        if ( target != null)

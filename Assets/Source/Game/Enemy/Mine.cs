@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Mine : Agent
 {
-    List<Behaviour> listBehaviour = new List<Behaviour>();
+
+    [SerializeField]
+    Aggro current;
 
     [SerializeField]
     float speed = 1.0f;
 
+
     [SerializeField]
-    float activeRange = 5f;
+    float activeRange = 20f;
 
     [SerializeField]
     float attackRange = 1f;
 
     public override void Initialize()
     {
-        listBehaviour.Add(new Aggro("Aggro", this, activeRange, attackRange));
-        listBehaviour.Add(new Idle("Idle", this, 0, 0));
-
-        CurrentBehaviour = listBehaviour[1];
+        current = new Aggro("Aggro", this, activeRange, attackRange);
+        CurrentBehaviour = current;
 
         base.Initialize();  
     }
@@ -31,7 +32,7 @@ public class Mine : Agent
         if (CurrentBehaviour != null)
         {
             Transform playerTransform = Target.transform;
-            Behaviour aiBehaviour = listBehaviour[1];
+            Behaviour aiBehaviour = current;
 
             CurrentBehaviour.Execute(ref aiBehaviour, playerTransform);
         }
@@ -51,18 +52,6 @@ public class Mine : Agent
         Debug.Log(this.name + "is attacking the player");
 
         base.Attack();
-    }
-
-    public int Comparator(int left, int right)
-    {
-        if ( left < right)
-        {
-            return -1;
-        }
-        else
-        {
-            return 1;
-        }
     }
 
     public override void Update()
