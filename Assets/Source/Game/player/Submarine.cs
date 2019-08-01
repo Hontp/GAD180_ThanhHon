@@ -29,7 +29,10 @@ public class Submarine : Ship
     [SerializeField]
     private int handling;
 
-    
+    public int ship;
+    public int hull;
+    public int prop;
+
 
     public override void Initialize()
     {
@@ -39,9 +42,9 @@ public class Submarine : Ship
         // scale the submarine
         // transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
-        setWeapon(1);
-        setHull(2);
-        setPropulsion(3);
+        setWeapon(ship);
+        setHull(hull);
+        setPropulsion(prop);
 
         base.Initialize();
     }
@@ -95,7 +98,7 @@ public class Submarine : Ship
         //GetComponent<SubmarineFire>().setPower(power);
         GetComponent<SubmarineMovement>().setSpeed(speed);
         GetComponent<SubmarineMovement>().setHandling(handling);
-        ShipsHealth = health;
+        ShipsHealth = health * 25 + 100;
 
         //GetComponent<SubmarineFire>().projectileIndex = GetShipComponent("weapon").index;
 
@@ -118,6 +121,20 @@ public class Submarine : Ship
     public override void Update()
     {
 
+        if (ShipsHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
         base.Update();
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.tag);
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Hit player");
+
+        }
     }
 }
