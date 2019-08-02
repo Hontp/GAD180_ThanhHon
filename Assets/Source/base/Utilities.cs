@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class Utilities : Singleton<Utilities>
 {
-    // all game objects are stoed in this collection
+    // all prefab are stored in this collection
+    private Dictionary<string, GameObject> prefabCollection = new Dictionary<string, GameObject>();
+
+    // all game objects instance are stored in this collection
     private Dictionary<string, GameObject> objectCollection = new Dictionary<string, GameObject>();
 
     /// <summary>
@@ -17,46 +20,52 @@ public class Utilities : Singleton<Utilities>
     }
 
     /// <summary>
-    /// Creates a game object from a prefab
+    /// Load Prefab to Memory
     /// </summary>
-    /// <param name="objectName">the name for the game object</param>
-    /// <param name="prefabPath"> the path to the prefab</param>
-    public void CreateGameObject(string objectName, string prefabPath)
+    /// <param name="prefabName">the id of the prefab</param>
+    /// <param name="prefabPath">the parth to the prefab</param>
+    public void LoadPrefab(string prefabName, string prefabPath)
     {
-        GameObject obj = null;
+        GameObject prefab = null;
 
-        obj = Resources.Load(prefabPath, typeof(GameObject)) as GameObject;
-
-        if (obj != null)
+        if (!prefabCollection.ContainsKey(prefabName))
         {
+            prefab = Resources.Load(prefabPath, typeof(GameObject)) as GameObject;
 
-            objectCollection.Add(objectName, obj);
-
+            if (prefab != null)
+            {
+                prefabCollection.Add(prefabName, prefab);
+            }
+            else
+            {
+                Debug.Log("Prefab Does not exists" + "\nName:" + prefabName + "\nPath: " + prefabPath);
+            }
         }
         else
         {
-            Debug.Log("Unable to create game object" +"\nName: " + objectName + "\nPath: " + prefabPath);
+            Debug.Log("This Prefab already exists in collection " + prefabName);
         }
     }
 
     /// <summary>
-    /// Instantiate and return a reference to the game object
-    /// will return null if the object doesnt exist
+    /// Instantiate a game object from the prefab collection
     /// </summary> 
-    /// <param name="gameObj"> the reference to the game object</param>
     /// <param name="objName"> the name of the game object</param>
     /// <param name="position"> the name of the game object</param>
-    /// /// <param name="rotation"> the rotation of the game object</param>
-    public void InstantiateGameObject(ref GameObject gameObj, string objName, 
+    /// <param name="rotation"> the rotation of the game object</param>
+    public void InstantiateGameObject(string objName,
         Vector2 position = default, Quaternion rotation = default)
     {
-        gameObj = null;
+       GameObject gameObj = null;
 
-        if (objectCollection.ContainsKey(objName))
+        if (prefabCollection.ContainsKey(objName))
         {
-           gameObj = Object.Instantiate(objectCollection[objName], 
+           gameObj = Object.Instantiate(prefabCollection[objName], 
                new Vector3(position.x, position.y, 0), 
                rotation);
+
+            if (!objectCollection.ContainsKey(objName))
+                objectCollection.Add(objName, gameObj);
         }
     }
 
