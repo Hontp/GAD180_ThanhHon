@@ -114,10 +114,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c8966179753bb40bc804f43145d155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
+  worldWidth: 100
+  rb: {fileID: 0}
   speed: 3
   torque: 0.75
   maxAngularVelocity: 90
   maxSpeed: 10
   torqueDampen: 0.1
   turnDampening: 2
-  worldWidth: 100
+  maxSpeedStatMultiplier: 0
+  speedStatMultiplier: 0
+  maxAngularVelocityStatMultiplier: 0
+  torqueStatMultiplier: 0
