@@ -13,14 +13,12 @@ public class Mine : Agent
     [SerializeField]
     float speed = 1.0f;
 
-
     [SerializeField]
     float activeRange;
 
     [SerializeField]
     float attackRange = 1f;
 
-    [SerializeField]
 
 
     public override void Initialize()
@@ -39,7 +37,7 @@ public class Mine : Agent
             Transform playerTransform = Target.transform;
             Behaviour aiBehaviour = current;
 
-            CurrentBehaviour.Execute(ref aiBehaviour, playerTransform);
+            CurrentBehaviour.Execute(playerTransform);
         }
 
     }

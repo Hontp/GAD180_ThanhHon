@@ -23,33 +23,6 @@ public abstract class Behaviour
         this.agent = driver;
     }
 
-    public void setRange(float val)
-    {
-        detectionRange = 0;
-    }
-
-    public float Distance()
-    {
-         return heading.magnitude;
-    }
-
-    public bool CheckRange()
-    {
-        bool inRange = false;
-
-        if ( heading.sqrMagnitude < detectionRange * detectionRange)
-        {
-            inRange = true;
-        }
-
-        return inRange;
-    }
-
-    public Vector2 Direction()
-    {
-        return heading / Distance();
-    }
-
-    public virtual void Execute(ref Behaviour behaviour, Transform target) { }
+    public virtual void Execute(Transform target) { }
     public virtual bool checkBehaviour() { return false; }
 }

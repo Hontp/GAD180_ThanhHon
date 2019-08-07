@@ -8,7 +8,13 @@ public class Skynet : MonoBehaviour
     private GameObject player = null;
 
     public List<GameObject> enmenies = new List<GameObject>();
+    Timer timer;
 
+    private void Start()
+    {
+        Utilities.Instance.LoadPrefab("mine", "Prefabs/Mine");
+
+    }
 
     public void SetPlayer( GameObject target)
     {
@@ -21,9 +27,8 @@ public class Skynet : MonoBehaviour
         }
     }
 
-
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         if (player != null)
