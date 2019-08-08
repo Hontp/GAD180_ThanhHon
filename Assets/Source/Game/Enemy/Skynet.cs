@@ -13,7 +13,7 @@ public class Skynet : MonoBehaviour
     private void Start()
     {
         Utilities.Instance.LoadPrefab("mine", "Prefabs/Mine");
-
+        
     }
 
     public void SetPlayer( GameObject target)
@@ -27,10 +27,19 @@ public class Skynet : MonoBehaviour
         }
     }
 
+   public Vector3 GenerateRandom(Camera cam)
+    {
+        Vector3 randVec = new Vector3(Random.Range(-cam.pixelWidth, cam.pixelWidth), 
+            Random.Range(-cam.pixelHeight, cam.pixelHeight));
+
+
+        return cam.ScreenToWorldPoint(randVec);
+        
+    }
+
     // Update is called once per frame
     private void Update()
     {
-
         if (player != null)
             SetPlayer(player);
     }
