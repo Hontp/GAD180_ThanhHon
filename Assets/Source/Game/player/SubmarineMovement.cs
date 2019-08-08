@@ -135,16 +135,50 @@ public class SubmarineMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D c)
     {
         Debug.Log(c.transform.tag);
-        if(c.transform.tag == "ScreenWrapperR")
+        
+        
+        if(c.transform.tag != "Untagged")
         {
-            Debug.Log("A");
-            transform.position = new Vector3(transform.position.x - worldWidth,transform.position.y,transform.position.z );
-            Debug.Log(transform.position.ToString());
-        }
-        if(c.transform.tag == "ScreenWrapperL")
-        {
-            Debug.Log("B");
-            transform.position = new Vector3(transform.position.x + worldWidth,transform.position.y,transform.position.z );
+            Collider2D[] colList = Physics2D.OverlapBoxAll(Screen.safeArea.center, new Vector2(Screen.safeArea.width, Screen.safeArea.height),0f);
+            
+            if (c.transform.tag == "ScreenWrapperR")
+            {
+                foreach(Collider2D col in colList)
+                {
+                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    {
+                        col.GetComponent<ScreenWrapper>().parentToPlayer(transform);
+                    }
+                }
+                transform.position = new Vector3(transform.position.x - worldWidth, transform.position.y, transform.position.z);
+                foreach (Collider2D col in colList)
+                {
+                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    {
+                       // rh.collider.GetComponent<ScreenWrapper>().unParentToplayer();
+                    }
+                }
+            }
+
+
+            if (c.transform.tag == "ScreenWrapperL")
+            {
+                foreach (Collider2D col in colList)
+                {
+                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    {
+                        c.GetComponent<ScreenWrapper>().parentToPlayer(transform);
+                    }
+                }
+                transform.position = new Vector3(transform.position.x + worldWidth, transform.position.y, transform.position.z);
+                foreach (Collider2D col in colList)
+                {
+                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    {
+                       // rh.collider.GetComponent<ScreenWrapper>().unParentToplayer();
+                    }
+                }
+            }
         }
     }
 

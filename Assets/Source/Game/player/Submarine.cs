@@ -99,7 +99,6 @@ public class Submarine : Ship
         GetComponent<SubmarineMovement>().setSpeed(speed);
         GetComponent<SubmarineMovement>().setHandling(handling);
         ShipsHealth = health * 25 + 100;
-
         //GetComponent<SubmarineFire>().projectileIndex = GetShipComponent("weapon").index;
 
     }

@@ -12,7 +12,7 @@ public class Agent : MonoBehaviour
 
     [SerializeField]
     private Behaviour current;
-
+    public Rigidbody2D rb;
 
     private void OnEnable()
     {
@@ -29,6 +29,7 @@ public class Agent : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         Initialize();
     }
 
