@@ -31,7 +31,7 @@ public class Target : MonoBehaviour
             {
                 p.projectileDestroy();
             }
-
+            Camera.main.gameObject.GetComponent<CameraManager>().setTrauma(0.25f);
             Destroy(gameObject);
             Instantiate(targetDestroy,transform.position,transform.rotation);
         }

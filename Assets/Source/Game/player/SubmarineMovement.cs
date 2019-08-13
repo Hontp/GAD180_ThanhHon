@@ -61,7 +61,11 @@ public class SubmarineMovement : MonoBehaviour
         Movement();
         Fire();
 
-        if(player.GetButtonLongPressDown("Reset"))
+        Debug.DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height/2, 0)));
+        //Debug.DrawLine(new Vector2(Screen.safeArea.xMin, Screen.safeArea.yMax), new Vector2(Screen.safeArea.xMax, Screen.safeArea.yMin));
+
+
+        if (player.GetButtonLongPressDown("Reset"))
         {
             SceneManager.LoadScene(sceneName);
         }
@@ -139,13 +143,16 @@ public class SubmarineMovement : MonoBehaviour
         
         if(c.transform.tag != "Untagged")
         {
-            Collider2D[] colList = Physics2D.OverlapBoxAll(Screen.safeArea.center, new Vector2(Screen.safeArea.width, Screen.safeArea.height),0f);
-            
+            Collider2D[] colList = Physics2D.OverlapBoxAll( Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4, Screen.height / 4)) , Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height)), 0f);
+            //Debug.DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)));
+           // Debug.DrawLine((Vector2)Camera.main.ScreenToWorldPoint(new Vector2(Screen.safeArea.xMin, Screen.safeArea.yMax)), (Vector2)Camera.main.ScreenToWorldPoint(new Vector2(Screen.safeArea.xMax, Screen.safeArea.yMin)));
+
             if (c.transform.tag == "ScreenWrapperR")
             {
                 foreach(Collider2D col in colList)
                 {
-                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    //Screenwrappable mask is number 8
+                    if (col.gameObject.layer == 8)
                     {
                         col.GetComponent<ScreenWrapper>().parentToPlayer(transform);
                     }
@@ -155,7 +162,7 @@ public class SubmarineMovement : MonoBehaviour
                 {
                     if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
                     {
-                       // rh.collider.GetComponent<ScreenWrapper>().unParentToplayer();
+                        col.GetComponent<ScreenWrapper>().unParentToplayer();
                     }
                 }
             }
@@ -165,17 +172,18 @@ public class SubmarineMovement : MonoBehaviour
             {
                 foreach (Collider2D col in colList)
                 {
-                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    //Screenwrappable mask is number 8
+                    if (col.gameObject.layer == 8)
                     {
-                        c.GetComponent<ScreenWrapper>().parentToPlayer(transform);
+                        col.GetComponent<ScreenWrapper>().parentToPlayer(transform);
                     }
                 }
-                transform.position = new Vector3(transform.position.x + worldWidth, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x - worldWidth, transform.position.y, transform.position.z);
                 foreach (Collider2D col in colList)
                 {
                     if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
                     {
-                       // rh.collider.GetComponent<ScreenWrapper>().unParentToplayer();
+                        col.GetComponent<ScreenWrapper>().unParentToplayer();
                     }
                 }
             }

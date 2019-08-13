@@ -8,6 +8,9 @@ public class MineDestroy : MonoBehaviour
     private AudioSource _as;
     private float timeToDestroy;
     private bool destoyed;
+    private bool hasStartedSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +18,14 @@ public class MineDestroy : MonoBehaviour
         timeToDestroy = _as.clip.length;
 
         destoyed = false;
+        hasStartedSound = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +35,7 @@ public class MineDestroy : MonoBehaviour
             collision.transform.parent.GetComponent<Submarine>().ShipsHealth -= 25;
             Destroy(gameObject,timeToDestroy);
             destoyed = true;
+            Camera.main.gameObject.GetComponent<CameraManager>().setTrauma(1f);
         }
     }
 
