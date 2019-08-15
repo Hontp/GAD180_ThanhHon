@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMod_SDTK/FMod_SDTK.fspro
-  SourceBankPathUnformatted: Assets/FMod_SDTK/Build
+  sourceProjectPath: C:/Users/sstanford/Desktop/FMod_SDTK/FMod_SDTK.fspro
+  SourceBankPathUnformatted: C:/Users/sstanford/Desktop/FMod_SDTK/Build
   AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
