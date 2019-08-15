@@ -29,7 +29,7 @@ public class Target : MonoBehaviour
         if(other.CompareTag("Projectile"))
         {
             Projectile p = other.GetComponent<Projectile>();
-            if(p != null)
+            if(p != null && !p.name.Contains("Laser"))
             {
                 p.projectileDestroy();
             }
