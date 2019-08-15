@@ -414,10 +414,13 @@ MonoBehaviour:
   firingPoint: {fileID: 6021858066585086904}
   projectiles:
   - {fileID: 3364006076906567076, guid: da971e3667b01b448a2e16554edbe5bb, type: 3}
+  - {fileID: 2691378233398576738, guid: 8cf7c5b545974614d891568bf3af406a, type: 3}
+  - {fileID: 6202708910685552800, guid: 962a10b3c57a42d4b8fd26c33e407dfa, type: 3}
   maxProjectiles: 3
   projectileIndex: 0
   fireCooldown: 0
   fireCooldownLength: 0.2
+  fireCooldownPercent: 0
 --- !u!1 &6850977274963913283
 GameObject:
   m_ObjectHideFlags: 0

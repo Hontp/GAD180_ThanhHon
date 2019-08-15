@@ -96,7 +96,7 @@ public class SubmarineMovement : MonoBehaviour
         else if( Mathf.Abs(horizontal) < deadZone )
         {
             // HARDCODED
-            rb.angularVelocity *= 1 - torqueDampen/turnDampening;
+            rb.angularVelocity *= 0.5f - torqueDampen/turnDampening;
             
         }
         // Rotation Left
