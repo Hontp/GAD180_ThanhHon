@@ -23,6 +23,9 @@ public class SubmarineFire : MonoBehaviour
     public float fireCooldown;
     public float fireCooldownLength;
 
+    public float fireCooldownPercent;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +43,12 @@ public class SubmarineFire : MonoBehaviour
             p.GetComponent<Projectile>().setParent(this);
             p.GetComponent<Projectile>().setPlayerVelocity(playerVelocity);
             fireCooldown = Time.time;
-
             //Sound Stuff
             _soundManager._firing = true;
+            fireCooldownPercent = 0f;
+
+
+//            Debug.Log("time.time=" + Time.time + "")
         }
     }
 
@@ -59,6 +65,32 @@ public class SubmarineFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+        projectileIndex = GetComponent<Submarine>().ship - 1;
+
+        if (projectileIndex == 0)
+        {
+            maxProjectiles = 3;
+            fireCooldownLength = 0.2f;
+        }
+        if (projectileIndex == 1)
+        {
+            maxProjectiles = 1;
+            fireCooldownLength = 1.25f;
+        }
+        if (projectileIndex == 2)
+        {
+            maxProjectiles = 5;
+            fireCooldownLength = 0.1f;
+        }
+
+
+        fireCooldownPercent += Time.deltaTime / (fireCooldownLength);
+        if(fireCooldownPercent > 1)
+        {
+            fireCooldownPercent = 1f;
+        }
 
     }
 }
