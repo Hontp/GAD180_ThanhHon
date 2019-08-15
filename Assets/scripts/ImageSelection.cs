@@ -7,7 +7,7 @@ public class ImageSelection : MonoBehaviour
 {
     public Image SelectionImage;
     public List<Sprite> ItemList = new List<Sprite>();
-    private int itemSpot = 0;
+    public int itemSpot;
 
     public void RightSelection()
     {
@@ -16,6 +16,7 @@ public class ImageSelection : MonoBehaviour
         {            
             itemSpot++;
             SelectionImage.sprite = ItemList[itemSpot];
+            Debug.Log(itemSpot + " " + ItemList[itemSpot].name);
         }
     }
 
@@ -26,6 +27,7 @@ public class ImageSelection : MonoBehaviour
         {
             itemSpot--;
             SelectionImage.sprite = ItemList[itemSpot];
+            Debug.Log(itemSpot + " " + ItemList[itemSpot].name);
         }
     }
 
@@ -35,12 +37,12 @@ public class ImageSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
