@@ -1,50 +1,26 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
-
-    private DecisionTree<Behaviour> decisionTree = new DecisionTree<Behaviour>();
-
-    private Collider2D sensor;
 
     [SerializeField]
     private GameObject target;
 
     [SerializeField]
     private Behaviour current;
+
+    [SerializeField]
+    private Behaviour previous;
     public Rigidbody2D rb;
 
-    private void OnEnable()
-    {
-        if (transform.GetComponent<Collider2D>() != null)
-        {
-            SetSensor(transform.GetComponent<Collider2D>());
-        }
-        else
-        {
-            Debug.Log("Agent Sensor Object not found");
-            return;
-        }
-    }
+    [SerializeField]
+    private float coolDown = 0f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Initialize();
     }
-
-    public DecisionTree<Behaviour> DataTree
-    {
-        get
-        {
-            return decisionTree;
-        }
-        set
-        {
-            decisionTree = value;
-        }
-    }
-    
 
     public GameObject Target
     {
@@ -70,6 +46,26 @@ public class Agent : MonoBehaviour
         }
     }
 
+    public Behaviour PreviousBehaviour
+    {
+        get
+        {
+            return previous;
+        }
+        set
+        {
+            previous = value;
+        }
+    }
+
+    public float SetCoolDown
+    {
+        set
+        {
+            coolDown = value;
+        }
+    }
+
     public virtual void Update()
     {
         
@@ -83,7 +79,6 @@ public class Agent : MonoBehaviour
     public virtual void Move( Vector2 target, float distance) { }
     public virtual void Attack() { }
     public virtual void Initialize() {}
-    public virtual void SetSensor( Collider2D sensor) { }
     public virtual void Execute() { }
   
 }
