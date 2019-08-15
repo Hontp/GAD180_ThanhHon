@@ -31,6 +31,9 @@
         <relationship name="timeline">
             <destination>{dda74550-2d31-48a9-ab9a-f5dbe409cbe0}</destination>
         </relationship>
+        <relationship name="parameters">
+            <destination>{7e2f4b1f-5ff0-4a83-8c6d-d4c7b97fbaa0}</destination>
+        </relationship>
         <relationship name="banks">
             <destination>{00b4eb2f-76f4-4955-b71b-0c93f8321e2c}</destination>
         </relationship>
@@ -69,6 +72,11 @@
     <object class="Timeline" id="{dda74550-2d31-48a9-ab9a-f5dbe409cbe0}">
         <relationship name="modules">
             <destination>{6febb213-807f-44bc-a5e6-24e73a7bf7ce}</destination>
+        </relationship>
+    </object>
+    <object class="ParameterProxy" id="{7e2f4b1f-5ff0-4a83-8c6d-d4c7b97fbaa0}">
+        <relationship name="preset">
+            <destination>{d3181106-1c64-431a-858e-8ba3aa120204}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{19dbe37e-3fbe-4e6c-a7b3-e606cd792ceb}">
@@ -139,6 +147,7 @@
     <object class="MixerBusEffectChain" id="{298dbd25-6a6b-44f9-b061-02ca7186e19e}">
         <relationship name="effects">
             <destination>{139bc894-9461-46b0-9890-18434a55beb5}</destination>
+            <destination>{9d7d2b81-e9ac-492e-a0f3-99491cf2951f}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{1136a229-bb24-4161-bd03-852098418016}"/>
@@ -185,4 +194,30 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{139bc894-9461-46b0-9890-18434a55beb5}"/>
+    <object class="SFXReverbEffect" id="{9d7d2b81-e9ac-492e-a0f3-99491cf2951f}">
+        <property name="decayTime">
+            <value>800</value>
+        </property>
+        <property name="HFDecayRatio">
+            <value>100</value>
+        </property>
+        <property name="diffusion">
+            <value>40.5</value>
+        </property>
+        <property name="density">
+            <value>38.5</value>
+        </property>
+        <property name="lowShelfFrequency">
+            <value>1000</value>
+        </property>
+        <property name="highCut">
+            <value>3400</value>
+        </property>
+        <property name="earlyLateMix">
+            <value>70</value>
+        </property>
+        <property name="wetLevel">
+            <value>-5.5</value>
+        </property>
+    </object>
 </objects>

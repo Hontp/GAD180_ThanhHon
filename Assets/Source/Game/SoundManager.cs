@@ -10,15 +10,15 @@ public class SoundManager : MonoBehaviour
     public bool _moving;
     public bool _firing;
     public bool _playerCollide;
+    public bool _enemyCollide;
     public int _enemyCount;
     public int _playerWeapon;
     public int _playerCollision;
+    public int _enemyCollision;
     public string _projectileAssignment;
     private string[] _projectileList = new string[3];
     private int _projectileType;
-    float _maxHealth;
-    public float _currentHealth;
-    private float _healthCount;
+    public float _healthCount;
 
     FMOD.Studio.EventInstance _music;
     FMOD.Studio.EventInstance _playerProp;
@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
         ProjectileTypeCheck();
         WeaponCheck();
         CollisionCheck();
-        HealthCheck();
+        //HealthCheck();
     }
 
     //Music
@@ -85,8 +85,8 @@ public class SoundManager : MonoBehaviour
     {
         if (Input.GetKeyDown("w"))
         {
-            _playerProp.start();
             _playerProp.setParameterByName("Moving", 1);
+            _playerProp.start();
         }
         else if (Input.GetKeyUp("w"))
         {
@@ -100,6 +100,7 @@ public class SoundManager : MonoBehaviour
         _projectileList[0] = "Bullet";
         _projectileList[1] = "Laser";
         _projectileList[2] = "Torpedo";
+        _projectileAssignment = _projectileList[0];
     }
     void ProjectileTypeCheck()
     {
@@ -136,6 +137,10 @@ public class SoundManager : MonoBehaviour
             _weaponType[_playerWeapon].start();
             _firing = false;
         }
+        else
+        {
+            
+        }
     }
 
     //Player Collision
@@ -152,19 +157,25 @@ public class SoundManager : MonoBehaviour
             _collisionType[_playerCollision].start();
             _playerCollide = false;
         }
+        else if (_enemyCollide)
+        {
+            _collisionType[_enemyCollision].start();
+            _enemyCollide = false;
+        }
+        else
+        {
+        }
     }
 
     void HealthSet()
     {
-        _maxHealth = _currentHealth;
         _lowHealth = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_LowHP");
         _playerDeath = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_Death");
     }
     void HealthCheck()
     {
-        _healthCount = (_currentHealth / _maxHealth) * 10;
         _lowHealth.setParameterByName("Health", _healthCount);
-        if (_healthCount > 2 && _healthCount < 5)
+        if (_healthCount > 2 && _healthCount < 6)
         {
             _lowHealth.start();
         }

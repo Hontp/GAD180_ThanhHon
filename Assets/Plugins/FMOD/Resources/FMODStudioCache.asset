@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9121198166873428662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-8630893320246565223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,11 +60,28 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3335552547713355612}
-  - {fileID: -842654682568557278}
+  - {fileID: 3635207604531608979}
+  - {fileID: -3041598745306166119}
   MinDistance: 0
   MaxDistance: 0
   Length: 9600
+--- !u!114 &-7883015884930979834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6601638816368062984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,11 +97,45 @@ MonoBehaviour:
   Path: C:/Users/sstanford/Documents/GitHub/Subs-Dive-To-Kill/Assets/FMod_SDTK/Build/Desktop/Master
     Bank.bank
   SubDir: 
-  lastModified: 637014799096203452
+  lastModified: 637014874170129245
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1612000
+    Value: 1610208
+  Exists: 1
+--- !u!114 &-6538679831832222216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &-6192232550016367476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
   Exists: 1
 --- !u!114 &-5982161969886888144
 MonoBehaviour:
@@ -92,6 +160,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 250
+--- !u!114 &-5626336825177827668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-5136714637271675062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,8 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Themes/Draft_MainTheme
   guid: 9448f7de1c8e5248a18500b95c76b298
-  Banks:
-  - {fileID: -6601638816368062984}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -147,12 +231,97 @@ MonoBehaviour:
   Path: C:/Users/sstanford/Documents/GitHub/Subs-Dive-To-Kill/Assets/FMod_SDTK/Build/Desktop/Master
     Bank.strings.bank
   SubDir: 
-  lastModified: 637014799096203452
+  lastModified: 637014874170199351
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1488
+    Value: 1444
   Exists: 1
+--- !u!114 &-3102275375367266500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &-3098580876732796568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &-3041598745306166119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 1
+--- !u!114 &-3020904122385910627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &-2809842437968056938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
 --- !u!114 &-2581056914369488831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,10 +421,11 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -7883015884930979834}
   MinDistance: 0
   MaxDistance: 0
-  Length: 2200
+  Length: 1950
 --- !u!114 &-337672144131184100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,22 +497,78 @@ MonoBehaviour:
   - {fileID: -8630893320246565223}
   - {fileID: 4003669690745041235}
   - {fileID: -104114841785865175}
-  - {fileID: 7443044763877886523}
   - {fileID: -8492011301944518198}
   - {fileID: 7106654529763521945}
-  - {fileID: -5136714637271675062}
   - {fileID: -337672144131184100}
   - {fileID: -491550711464726250}
   - {fileID: -5982161969886888144}
   - {fileID: -2556260324160848727}
-  - {fileID: 2139553860644340509}
+  - {fileID: 4904395321500439960}
+  - {fileID: 192295358357147362}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6601638816368062984}
   StringsBanks:
   - {fileID: -3289868537078513278}
-  stringsBankWriteTime: 637014799096203452
+  stringsBankWriteTime: 637014874170199351
   cacheVersion: 3
+--- !u!114 &93688486116960253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &192295358357147362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hit_Physical
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hit_Physical
+  guid: ed92676df5fb7c47aadb1e64cae44fa8
+  Banks:
+  - {fileID: -6601638816368062984}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &313664221927943302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
 --- !u!114 &1082221728577929313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,8 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Hit_Phys
   guid: ed92676df5fb7c47aadb1e64cae44fa8
-  Banks:
-  - {fileID: -6601638816368062984}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -429,6 +654,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &2853092538063303931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &2992063280841812785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_LowHP/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 1
 --- !u!114 &3153924242946609251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +711,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1400
+--- !u!114 &3363932523544594302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3635207604531608979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 1
 --- !u!114 &4003669690745041235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,6 +768,97 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &4309841519797274891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &4533198353509712546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &4559885107763643448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 1
+--- !u!114 &4838969240006836761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &4904395321500439960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hit_Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hit_Explosion
+  guid: 56a5385b4730164c9dc023043464e084
+  Banks:
+  - {fileID: -6601638816368062984}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
 --- !u!114 &4913454983989404161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +905,91 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &5751039032663441364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &5791539951598333911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &6545061157461103455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &6748496369777888751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &7039424619820762208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
 --- !u!114 &7106654529763521945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,7 +1009,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2992063280841812785}
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
@@ -558,8 +1028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Hit_Explo
   guid: 56a5385b4730164c9dc023043464e084
-  Banks:
-  - {fileID: -6601638816368062984}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -567,3 +1036,105 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &7730523130482890818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &7861420751768726959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &8068679122049364492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &8116802638182409822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &8245931779500649161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &8492292784783467168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player_Prop/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0

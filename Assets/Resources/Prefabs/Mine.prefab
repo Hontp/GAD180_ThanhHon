@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b074fc7f2e7d44685afc65ca205ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDestroy: {fileID: 1835377020815148102, guid: 63d39d6f452035043900c3cbc4adec6a,
+  mineExplode: {fileID: 1835377020815148102, guid: 63d39d6f452035043900c3cbc4adec6a,
     type: 3}
 --- !u!114 &8973966701008297515
 MonoBehaviour:

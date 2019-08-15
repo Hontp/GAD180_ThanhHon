@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Mine : Agent
 {
-
     public GameObject mineExplode;
+    public SoundManager _soundManager;
 
     [SerializeField]
     Aggro current;
@@ -62,6 +62,10 @@ public class Mine : Agent
         Instantiate(mineExplode,transform.position,Quaternion.identity);
         Destroy(this.gameObject);
         base.Attack();
+
+        //Sound Stuff
+        _soundManager._enemyCollision = 2;
+        _soundManager._enemyCollide = true;
     }
 
     public override void Update()

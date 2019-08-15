@@ -18,7 +18,7 @@ public class SubmarineMovement : MonoBehaviour
     private SubmarineFire sf;
     private Player player;
     private Submarine s;
-    private PlayerSound playerSound;
+
 
     [Header("These will be modified by StatMultiplier")]
     public float speed;
@@ -51,7 +51,7 @@ public class SubmarineMovement : MonoBehaviour
         s = GetComponent<Submarine>();
         sf = GetComponent<SubmarineFire>();
         rb = GetComponent<Rigidbody2D>();
-        playerSound = GetComponent<PlayerSound>();
+
 
         player = Rewired.ReInput.players.GetPlayer(0);
 
