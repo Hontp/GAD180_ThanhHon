@@ -23,6 +23,7 @@ public abstract class Behaviour
         this.agent = driver;
     }
 
-    public virtual void Execute(Transform target) { }
+    public virtual void Execute(Vector3 target, float cooldownTime = 0) { }
     public virtual bool checkBehaviour() { return false; }
+    
 }

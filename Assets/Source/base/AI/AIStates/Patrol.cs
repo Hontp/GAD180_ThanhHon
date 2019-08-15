@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Patrol : Behaviour
@@ -19,26 +18,24 @@ public class Patrol : Behaviour
         detectionRange = activeRange;
         attackRange = attkRange;
         agent = driver;
-
     }
 
-    public override void Execute(Transform target)
+    public override void Execute(Vector3 target, float cooldownTime)
     {
-        float dist = Vector2.Distance(target.transform.position, agent.transform.position);
+        float dist = Vector2.Distance(target, agent.transform.position);
 
         if (!checkBehaviour())
             return;
 
-      /*  if (dist <= detectionRange)
-        {
-            agent.Move(target.position, dist);
-        }
-        else if (dist <= attackRange)
-        {
-            agent.Attack();
-        }*/
+        if (cooldownTime > 0)
+            return;
 
-        base.Execute(target);
+        if (dist != 0)
+        {         
+            agent.Move(target, dist);
+        }
+
+        base.Execute(target, cooldownTime);
     }
 
     public override bool checkBehaviour()

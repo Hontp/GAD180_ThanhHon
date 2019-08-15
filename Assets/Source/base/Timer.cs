@@ -1,30 +1,19 @@
 ﻿using UnityEngine;
 
-public class Timer : Singleton<Timer>
+public class Timer
 {
+    [SerializeField]
+    private float coolDown = 5.0f;
 
-    private float timer = 5.0f;
-    private float time = 0;
-
-    public void Init()
+    public void SetTime( float timer)
     {
-        time = timer;
+        coolDown = timer;
     }
 
-    public float Count
+    public float GetDownTime()
     {
-        get
-        {
-            return time;
-        }
-        set
-        {
-            timer = value;
-        }
-    }
+        coolDown -= Time.deltaTime;
 
-    public void Update()
-    {
-        time -= Time.deltaTime;
+        return coolDown;
     }
 }

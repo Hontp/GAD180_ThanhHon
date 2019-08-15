@@ -2,10 +2,11 @@
 
 public class Aggro : Behaviour
 {
+
     public Aggro()
     {
         Name = "Aggro";
-        detectionRange = 5f;
+        detectionRange = 3f;
         attackRange = 1.5f;
         agent = null;
 
@@ -17,26 +18,32 @@ public class Aggro : Behaviour
         detectionRange = activeRange;
         attackRange = attkRange;
         agent = driver;
-
     }
    
-    public override void Execute(Transform target)
+    public override void Execute(Vector3 target, float cooldownTime)
     {
-        float dist = Vector2.Distance(target.transform.position, agent.transform.position);
+        float dist = Vector2.Distance(target, agent.transform.position);
 
         if (!checkBehaviour())
             return;
 
-        if ( dist <= detectionRange)
+        if (cooldownTime > 0)
+            return;
+
+        if ( dist < detectionRange && dist > attackRange)
         {
-            agent.Move(target.position, dist);            
+            agent.Move(target, dist);            
         }
         else if ( dist <= attackRange )
         {
-                agent.Attack();            
+            agent.Attack();            
         }
-
-        base.Execute(target); 
+        else
+        {
+            agent.PreviousBehaviour.Execute(target, cooldownTime);
+        }
+       
+        base.Execute(target, cooldownTime); 
     }
 
     public override bool checkBehaviour()

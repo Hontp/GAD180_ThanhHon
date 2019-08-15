@@ -9,6 +9,12 @@ public class Agent : MonoBehaviour
     [SerializeField]
     private Behaviour current;
 
+    [SerializeField]
+    private Behaviour previous;
+
+    [SerializeField]
+    private float coolDown = 0f;
+
     private void Start()
     {
         Initialize();
@@ -35,6 +41,26 @@ public class Agent : MonoBehaviour
         set
         {
             current = value;
+        }
+    }
+
+    public Behaviour PreviousBehaviour
+    {
+        get
+        {
+            return previous;
+        }
+        set
+        {
+            previous = value;
+        }
+    }
+
+    public float SetCoolDown
+    {
+        set
+        {
+            coolDown = value;
         }
     }
 

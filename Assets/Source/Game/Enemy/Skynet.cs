@@ -5,15 +5,16 @@ using UnityEngine;
 public class Skynet : MonoBehaviour
 {
     [SerializeField]
+    private float coolDown = 5.0f;
+
+    [SerializeField]
     private GameObject player = null;
 
     public List<GameObject> enmenies = new List<GameObject>();
-    Timer timer;
 
     private void Start()
     {
         Utilities.Instance.LoadPrefab("mine", "Prefabs/Mine");
-        
     }
 
     public void SetPlayer( GameObject target)
@@ -23,24 +24,16 @@ public class Skynet : MonoBehaviour
             for (int i = 0; i < enmenies.Count; i++)
             {
                 enmenies[i].GetComponent<Agent>().Target = target;
+                enmenies[i].GetComponent<Agent>().SetCoolDown = coolDown;
             }
         }
-    }
-
-   public Vector3 GenerateRandom(Camera cam)
-    {
-        Vector3 randVec = new Vector3(Random.Range(-cam.pixelWidth, cam.pixelWidth), 
-            Random.Range(-cam.pixelHeight, cam.pixelHeight));
-
-
-        return cam.ScreenToWorldPoint(randVec);
-        
     }
 
     // Update is called once per frame
     private void Update()
     {
+
         if (player != null)
-            SetPlayer(player);
+            SetPlayer(player); 
     }
 }
