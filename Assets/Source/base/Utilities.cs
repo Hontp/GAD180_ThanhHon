@@ -9,6 +9,9 @@ public class Utilities : Singleton<Utilities>
     // all game objects instance are stored in this collection
     private Dictionary<string, GameObject> objectCollection = new Dictionary<string, GameObject>();
 
+
+    private int instanceIndex = 1;
+
     /// <summary>
     /// public method creates the sprite from the image
     /// </summary>
@@ -66,7 +69,14 @@ public class Utilities : Singleton<Utilities>
 
             if (!objectCollection.ContainsKey(objName))
                 objectCollection.Add(objName, gameObj);
+            else
+            {
+
+                objectCollection.Add(objName + instanceIndex, gameObj);
+            }
         }
+
+        instanceIndex++;
     }
 
     /// <summary>

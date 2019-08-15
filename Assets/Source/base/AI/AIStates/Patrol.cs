@@ -1,25 +1,25 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class Aggro : Behaviour
+public class Patrol : Behaviour
 {
-
-    public Aggro()
+    public Patrol()
     {
-        Name = "Aggro";
-        detectionRange = 3f;
+        Name = "Patrol";
+        detectionRange = 5f;
         attackRange = 1.5f;
         agent = null;
 
     }
 
-    public Aggro (string name, Agent driver, float activeRange = 0, float attkRange = 0)
+    public Patrol(string name, Agent driver, float activeRange = 0, float attkRange = 0)
     {
         Name = name;
         detectionRange = activeRange;
         attackRange = attkRange;
         agent = driver;
     }
-   
+
     public override void Execute(Vector3 target, float cooldownTime)
     {
         float dist = Vector2.Distance(target, agent.transform.position);
@@ -30,20 +30,12 @@ public class Aggro : Behaviour
         if (cooldownTime > 0)
             return;
 
-        if ( dist < detectionRange && dist > attackRange)
-        {
-            agent.Move(target, dist);            
+        if (dist != 0)
+        {         
+            agent.Move(target, dist);
         }
-        else if ( dist <= attackRange )
-        {
-            agent.Attack();            
-        }
-        else
-        {
-            agent.PreviousBehaviour.Execute(target, cooldownTime);
-        }
-       
-        base.Execute(target, cooldownTime); 
+
+        base.Execute(target, cooldownTime);
     }
 
     public override bool checkBehaviour()
