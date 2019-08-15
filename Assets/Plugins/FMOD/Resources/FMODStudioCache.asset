@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!114 &-8829099814914500332
+=======
+--- !u!114 &-8141278693525200018
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,6 +13,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/Player_Death
   m_EditorClassIdentifier: 
@@ -24,6 +29,17 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 2000
 --- !u!114 &-8716555026382785648
+=======
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 10
+  Default: 0
+  Exists: 0
+--- !u!114 &-7787042492849479809
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,6 +49,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Enemy_Prop
   m_EditorClassIdentifier: 
   Path: event:/SFX/Enemy_Prop
@@ -47,6 +64,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1400
 --- !u!114 &-8195726026395820643
+=======
+  m_Name: event:/SFX/Hit_Laser
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hit_Laser
+  guid: 0f7ed7ac7d1e6b49b8213acb19cca05f
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-7269098091835120181
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,6 +89,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/UI_Click
   m_EditorClassIdentifier: 
   Path: event:/SFX/UI_Click
@@ -70,6 +104,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 300
 --- !u!114 &-8080119758683178891
+=======
+  m_Name: event:/SFX/Player_Prop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player_Prop
+  guid: 993e85a090211d42ad6bc49565cd3f71
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2200
+--- !u!114 &-5874256194386803548
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,6 +128,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Combat/Health
   m_EditorClassIdentifier: 
@@ -87,6 +138,21 @@ MonoBehaviour:
   Default: 10
   Exists: 0
 --- !u!114 &-8020555423619060597
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/sstanford/Documents/GitHub/Subs-Dive-To-Kill/Assets/FMod_SDTK/Build/Desktop/Master
+    Bank.strings.bank
+  SubDir: 
+  lastModified: 637014767856338633
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1488
+  Exists: 1
+--- !u!114 &-5804770340477040318
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,18 +162,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Weap_Bullet
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weap_Bullet
   guid: a2af87ccb5563e41bd2f170a413bdaf3
   Banks:
   - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/SFX/Weap_Torp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weap_Torp
+  guid: 12b417eb73629e46bac20cf29b86ca14
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< Updated upstream
   Length: 250
 --- !u!114 &-7787554623078292668
 MonoBehaviour:
@@ -212,6 +288,10 @@ MonoBehaviour:
   Default: 10
   Exists: 1
 --- !u!114 &-5362607189310898938
+=======
+  Length: 1000
+--- !u!114 &-5469839264098392699
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,7 +305,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Hit_Phys
   guid: ed92676df5fb7c47aadb1e64cae44fa8
+<<<<<<< Updated upstream
   Banks: []
+=======
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -233,7 +318,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+<<<<<<< Updated upstream
 --- !u!114 &-5123150974644028468
+=======
+--- !u!114 &-5014460268300209431
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,6 +332,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Mine_Track
   m_EditorClassIdentifier: 
   Path: event:/SFX/Mine_Track
@@ -257,6 +347,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1000
 --- !u!114 &-3811432718514933452
+=======
+  m_Name: event:/SFX/Player_Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player_Death
+  guid: 098cbd54f3ca304d8732b1ec25dfad80
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &-4680935858217121385
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,6 +371,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Themes/Draft_MainTheme
   m_EditorClassIdentifier: 
@@ -280,6 +387,17 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 58600
 --- !u!114 &-3162771703018905999
+=======
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
+--- !u!114 &-4426496703412861708
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,6 +407,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Hit_Explosion
   m_EditorClassIdentifier: 
   Path: event:/SFX/Hit_Explosion
@@ -320,6 +439,22 @@ MonoBehaviour:
   Default: 0
   Exists: 0
 --- !u!114 &-2444890884144749806
+=======
+  m_Name: event:/SFX/Enemy_Prop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemy_Prop
+  guid: 0ec72b010420524fad2f7d667c2bceba
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1400
+--- !u!114 &-3826633059676240030
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,6 +469,7 @@ MonoBehaviour:
   Path: C:/Users/sstanford/Documents/GitHub/Subs-Dive-To-Kill/Assets/FMod_SDTK/Build/Desktop/Master
     Bank.bank
   SubDir: 
+<<<<<<< Updated upstream
   lastModified: 637008879811544678
   LoadResult: 0
   FileSizes:
@@ -358,6 +494,15 @@ MonoBehaviour:
   Default: 10
   Exists: 0
 --- !u!114 &-1835346405519652628
+=======
+  lastModified: 637014767856268826
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1612000
+  Exists: 1
+--- !u!114 &-3727783902833315505
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -371,7 +516,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Hit_Explo
   guid: 56a5385b4730164c9dc023043464e084
+<<<<<<< Updated upstream
   Banks: []
+=======
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -379,7 +529,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+<<<<<<< Updated upstream
 --- !u!114 &-1415655997982178590
+=======
+--- !u!114 &-2642686489604306361
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,6 +542,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/Player_Prop
   m_EditorClassIdentifier: 
@@ -404,6 +559,17 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1570
 --- !u!114 &-1350347840262082576
+=======
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Combat/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 1
+--- !u!114 &-693844497488961075
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,6 +579,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Player_LowHP
   m_EditorClassIdentifier: 
   Path: event:/SFX/Player_LowHP
@@ -428,6 +595,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1150
 --- !u!114 &-1087664171615393464
+=======
+  m_Name: event:/SFX/Mine_Active
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Mine_Active
+  guid: 966b4a3d3e9dc74f8f81bafb31331a4c
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-645188874878273161
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,12 +620,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Enemy_Death
   m_EditorClassIdentifier: 
   Path: event:/SFX/Enemy_Death
   guid: 0aef9207115bd74f9a35f5345a93bb29
   Banks:
   - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/SFX/Weap_Laser
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weap_Laser
+  guid: 3c78b61ebf96294c80934d439d419219
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -450,6 +642,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+<<<<<<< Updated upstream
 --- !u!114 &-1054045700871065489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +694,8 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,6 +709,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< Updated upstream
   - {fileID: 4831265659753766093}
   - {fileID: -2444890884144749806}
   EditorEvents:
@@ -594,6 +790,37 @@ MonoBehaviour:
   Default: 0
   Exists: 1
 --- !u!114 &635552118345267816
+=======
+  - {fileID: -5874256194386803548}
+  - {fileID: -3826633059676240030}
+  EditorEvents:
+  - {fileID: -5014460268300209431}
+  - {fileID: 7707378218509760329}
+  - {fileID: -4426496703412861708}
+  - {fileID: -7787042492849479809}
+  - {fileID: 2789765852341645279}
+  - {fileID: -5804770340477040318}
+  - {fileID: -645188874878273161}
+  - {fileID: 4707408943049175277}
+  - {fileID: 3384074563450847506}
+  - {fileID: -3727783902833315505}
+  - {fileID: 1061741527877289392}
+  - {fileID: 906621750149624964}
+  - {fileID: 5696142532598783904}
+  - {fileID: -693844497488961075}
+  - {fileID: -7269098091835120181}
+  - {fileID: 36711004061087739}
+  - {fileID: 7596595300670770322}
+  - {fileID: -5469839264098392699}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -3826633059676240030}
+  StringsBanks:
+  - {fileID: -5874256194386803548}
+  stringsBankWriteTime: 637014767856338633
+  cacheVersion: 3
+--- !u!114 &36711004061087739
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -603,18 +830,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Hit_Physical
   m_EditorClassIdentifier: 
   Path: event:/SFX/Hit_Physical
   guid: ed92676df5fb7c47aadb1e64cae44fa8
   Banks:
   - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/SFX/Weap_Bullet
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weap_Bullet
+  guid: a2af87ccb5563e41bd2f170a413bdaf3
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< Updated upstream
   Length: 270
 --- !u!114 &871060630640518411
 MonoBehaviour:
@@ -634,6 +871,10 @@ MonoBehaviour:
   Default: 10
   Exists: 1
 --- !u!114 &1631626068448985821
+=======
+  Length: 250
+--- !u!114 &906621750149624964
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -643,18 +884,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/UI_Finish
   m_EditorClassIdentifier: 
   Path: event:/SFX/UI_Finish
   guid: 3d8c7c5403a30e458b7dbd18a784b7b3
   Banks:
   - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/SFX/Player_LowHP
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player_LowHP
+  guid: 6b1ca186e7c79b4298a1839520ade326
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< Updated upstream
   Length: 500
 --- !u!114 &3450945193061807284
 MonoBehaviour:
@@ -674,6 +925,10 @@ MonoBehaviour:
   Default: 10
   Exists: 0
 --- !u!114 &3553684478902944452
+=======
+  Length: 1000
+--- !u!114 &1061741527877289392
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -683,6 +938,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Mine_Active
   m_EditorClassIdentifier: 
   Path: event:/SFX/Mine_Active
@@ -697,6 +953,24 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1000
 --- !u!114 &4143911292661757670
+=======
+  m_Name: event:/AdapMusic/Combat
+  m_EditorClassIdentifier: 
+  Path: event:/AdapMusic/Combat
+  guid: 6732bd9e3c9a4248b1f4c4ec6019554e
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2642686489604306361}
+  - {fileID: 8144289227343630682}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9600
+--- !u!114 &2789765852341645279
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -711,7 +985,11 @@ MonoBehaviour:
   Path: event:/SFX/Torp_Prop
   guid: 126a2aa7f527884dbe2f23e117f4e96c
   Banks:
+<<<<<<< Updated upstream
   - {fileID: -2444890884144749806}
+=======
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -719,7 +997,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1400
+<<<<<<< Updated upstream
 --- !u!114 &4409802249086773313
+=======
+--- !u!114 &3384074563450847506
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -729,18 +1011,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Weap_Laser
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weap_Laser
   guid: 3c78b61ebf96294c80934d439d419219
   Banks:
   - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/SFX/UI_Click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI_Click
+  guid: 5532a20543eb98459de1f22ec9ace19d
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< Updated upstream
   Length: 1000
 --- !u!114 &4831265659753766093
 MonoBehaviour:
@@ -798,6 +1090,10 @@ MonoBehaviour:
   Default: 10
   Exists: 1
 --- !u!114 &6029616446602135039
+=======
+  Length: 300
+--- !u!114 &4707408943049175277
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -806,6 +1102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Player_Prop/Moving
   m_EditorClassIdentifier: 
@@ -815,29 +1112,23 @@ MonoBehaviour:
   Default: 0
   Exists: 0
 --- !u!114 &6345288227177246441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+=======
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Hit_Laser
+  m_Name: event:/SFX/UI_Finish
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Hit_Laser
-  guid: 0f7ed7ac7d1e6b49b8213acb19cca05f
+  Path: event:/SFX/UI_Finish
+  guid: 3d8c7c5403a30e458b7dbd18a784b7b3
   Banks:
-  - {fileID: -2444890884144749806}
+  - {fileID: -3826633059676240030}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1000
---- !u!114 &6415930040066418241
+  Length: 500
+--- !u!114 &5696142532598783904
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -847,6 +1138,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/SFX/Hit_Laser
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hit_Laser
+  guid: 0f7ed7ac7d1e6b49b8213acb19cca05f
+  Banks:
+  - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/Themes/Draft_MainTheme
+  m_EditorClassIdentifier: 
+  Path: event:/Themes/Draft_MainTheme
+  guid: 9448f7de1c8e5248a18500b95c76b298
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+<<<<<<< Updated upstream
+  Length: 1000
+--- !u!114 &6415930040066418241
+=======
+  Length: 58600
+--- !u!114 &7596595300670770322
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/AdapMusic/Combat
   m_EditorClassIdentifier: 
   Path: event:/AdapMusic/Combat
@@ -863,6 +1192,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 9600
 --- !u!114 &7128743072191388037
+=======
+  m_Name: event:/SFX/Mine_Track
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Mine_Track
+  guid: b149bc49f6730147a24d04ad82f7592e
+  Banks:
+  - {fileID: -3826633059676240030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &7707378218509760329
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -872,12 +1217,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: event:/SFX/Weap_Torp
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weap_Torp
   guid: 12b417eb73629e46bac20cf29b86ca14
   Banks:
   - {fileID: -2444890884144749806}
+=======
+  m_Name: event:/SFX/Enemy_Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemy_Death
+  guid: 0aef9207115bd74f9a35f5345a93bb29
+  Banks:
+  - {fileID: -3826633059676240030}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -885,7 +1239,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+<<<<<<< Updated upstream
 --- !u!114 &7857653923428926648
+=======
+--- !u!114 &8144289227343630682
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -901,6 +1259,7 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+<<<<<<< Updated upstream
   Exists: 0
 --- !u!114 &7876767126686529155
 MonoBehaviour:
@@ -953,3 +1312,6 @@ MonoBehaviour:
   Max: 10
   Default: 0
   Exists: 0
+=======
+  Exists: 1
+>>>>>>> Stashed changes
