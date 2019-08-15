@@ -19,6 +19,7 @@ public class SubmarineMovement : MonoBehaviour
     private Player player;
     private Submarine s;
 
+
     [Header("These will be modified by StatMultiplier")]
     public float speed;
     public float torque;
@@ -51,6 +52,7 @@ public class SubmarineMovement : MonoBehaviour
         sf = GetComponent<SubmarineFire>();
         rb = GetComponent<Rigidbody2D>();
 
+
         player = Rewired.ReInput.players.GetPlayer(0);
 
     }
@@ -61,7 +63,11 @@ public class SubmarineMovement : MonoBehaviour
         Movement();
         Fire();
 
-        if(player.GetButtonLongPressDown("Reset"))
+        Debug.DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height/2, 0)));
+        //Debug.DrawLine(new Vector2(Screen.safeArea.xMin, Screen.safeArea.yMax), new Vector2(Screen.safeArea.xMax, Screen.safeArea.yMin));
+
+
+        if (player.GetButtonLongPressDown("Reset"))
         {
             SceneManager.LoadScene(sceneName);
         }
@@ -135,16 +141,54 @@ public class SubmarineMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D c)
     {
         Debug.Log(c.transform.tag);
-        if(c.transform.tag == "ScreenWrapperR")
+        
+        
+        if(c.transform.tag != "Untagged")
         {
-            Debug.Log("A");
-            transform.position = new Vector3(transform.position.x - worldWidth,transform.position.y,transform.position.z );
-            Debug.Log(transform.position.ToString());
-        }
-        if(c.transform.tag == "ScreenWrapperL")
-        {
-            Debug.Log("B");
-            transform.position = new Vector3(transform.position.x + worldWidth,transform.position.y,transform.position.z );
+            Collider2D[] colList = Physics2D.OverlapBoxAll( Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4, Screen.height / 4)) , Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height)), 0f);
+            //Debug.DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)));
+           // Debug.DrawLine((Vector2)Camera.main.ScreenToWorldPoint(new Vector2(Screen.safeArea.xMin, Screen.safeArea.yMax)), (Vector2)Camera.main.ScreenToWorldPoint(new Vector2(Screen.safeArea.xMax, Screen.safeArea.yMin)));
+
+            if (c.transform.tag == "ScreenWrapperR")
+            {
+                foreach(Collider2D col in colList)
+                {
+                    //Screenwrappable mask is number 8
+                    if (col.gameObject.layer == 8)
+                    {
+                        col.GetComponent<ScreenWrapper>().parentToPlayer(transform);
+                    }
+                }
+                transform.position = new Vector3(transform.position.x - worldWidth, transform.position.y, transform.position.z);
+                foreach (Collider2D col in colList)
+                {
+                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    {
+                        col.GetComponent<ScreenWrapper>().unParentToplayer();
+                    }
+                }
+            }
+
+
+            if (c.transform.tag == "ScreenWrapperL")
+            {
+                foreach (Collider2D col in colList)
+                {
+                    //Screenwrappable mask is number 8
+                    if (col.gameObject.layer == 8)
+                    {
+                        col.GetComponent<ScreenWrapper>().parentToPlayer(transform);
+                    }
+                }
+                transform.position = new Vector3(transform.position.x - worldWidth, transform.position.y, transform.position.z);
+                foreach (Collider2D col in colList)
+                {
+                    if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
+                    {
+                        col.GetComponent<ScreenWrapper>().unParentToplayer();
+                    }
+                }
+            }
         }
     }
 

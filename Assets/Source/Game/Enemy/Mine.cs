@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Mine : Agent
 {
 
     Timer cooldownTimer = new Timer();
+    public GameObject mineExplode;
+    public SoundManager _soundManager;
 
     [SerializeField]
     Behaviour current;
@@ -83,7 +85,11 @@ public class Mine : Agent
     public override void Move(Vector2 target, float distance)
     {
 
-        transform.position = Vector2.MoveTowards(transform.position, target, distance * speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, target, distance * speed * Time.deltaTime);
+        if(rb.IsAwake())
+        {
+            rb.MovePosition(Vector2.MoveTowards(transform.position, target, distance * speed * Time.deltaTime));
+        }
 
         base.Move(target, distance);
     }
@@ -91,8 +97,13 @@ public class Mine : Agent
     public override void Attack()
     {
         Debug.Log(this.name + "is attacking the player");
-
+        Instantiate(mineExplode,transform.position,Quaternion.identity);
+        Destroy(this.gameObject);
         base.Attack();
+
+        //Sound Stuff
+        _soundManager._enemyCollision = 2;
+        _soundManager._enemyCollide = true;
     }
 
     public override void Update()

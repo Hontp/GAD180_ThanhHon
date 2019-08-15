@@ -13,6 +13,9 @@ public class HealthBar : MonoBehaviour
     private Image image;
     public float maxHealth;
 
+    //Sound Stuff
+    private SoundManager _soundManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,9 @@ public class HealthBar : MonoBehaviour
         initialWidth = rt.rect.width;
         sub = Utilities.Instance.GetCollection["player"].GetComponent<Submarine>();
         maxHealth = sub.ShipsHealth;
+
+        //Sound Stuff
+        _soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame

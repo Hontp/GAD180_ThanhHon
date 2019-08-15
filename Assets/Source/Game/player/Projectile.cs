@@ -16,6 +16,7 @@ public abstract class Projectile : MonoBehaviour
     public float damage;
     protected Vector2 playerVelocity;
     public GameObject ps;
+    private SoundManager _soundManager;
     
     public float distance;
 
@@ -26,8 +27,7 @@ public abstract class Projectile : MonoBehaviour
     {
         startPosition = (Vector2) transform.position; 
         rb = GetComponent<Rigidbody2D>();
-        timeShot = Time.time;
-        
+        timeShot = Time.time;        
     }
 
     public void setParent(SubmarineFire parent)

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
@@ -11,12 +11,14 @@ public class Agent : MonoBehaviour
 
     [SerializeField]
     private Behaviour previous;
+    public Rigidbody2D rb;
 
     [SerializeField]
     private float coolDown = 0f;
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         Initialize();
     }
 

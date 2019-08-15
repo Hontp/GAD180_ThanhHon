@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    public GameObject targetDestroy;
+    public GameObject mineExplode;
+    private SoundManager _soundManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -31,17 +33,23 @@ public class Target : MonoBehaviour
             {
                 p.projectileDestroy();
             }
-
+            Camera.main.gameObject.GetComponent<CameraManager>().setTrauma(0.25f);
             Destroy(gameObject);
-            Instantiate(targetDestroy,transform.position,transform.rotation);
-        }
+            Instantiate(mineExplode, transform.position, Quaternion.identity);
 
-        
-        if (other.CompareTag("Player"))
+            //Sound Stuff
+            _soundManager._enemyCollision = 2;
+            _soundManager._enemyCollide = true;
+        }
+        else if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
             Utilities.Instance.GetCollection["player"].GetComponent<Submarine>().ShipsHealth -= 25f;
-            Instantiate(targetDestroy, transform.position, transform.rotation);
+            Instantiate(mineExplode, transform.position, Quaternion.identity);
+
+            //Sound Stuff
+            _soundManager._enemyCollision = 2;
+            _soundManager._enemyCollide = true;
         }
         
     }

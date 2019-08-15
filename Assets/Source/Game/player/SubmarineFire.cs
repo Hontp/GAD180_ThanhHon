@@ -16,6 +16,8 @@ public class SubmarineFire : MonoBehaviour
     
     public int projectileIndex;
 
+    [Header("Sound Design")]
+    private SoundManager _soundManager;
 
     [Header("Firing Timers")]
     public float fireCooldown;
@@ -24,7 +26,7 @@ public class SubmarineFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _soundManager = FindObjectOfType<SoundManager>();
         //projectiles = new GameObject[maxProjectiles];
     }
 
@@ -38,6 +40,9 @@ public class SubmarineFire : MonoBehaviour
             p.GetComponent<Projectile>().setParent(this);
             p.GetComponent<Projectile>().setPlayerVelocity(playerVelocity);
             fireCooldown = Time.time;
+
+            //Sound Stuff
+            _soundManager._firing = true;
         }
     }
 

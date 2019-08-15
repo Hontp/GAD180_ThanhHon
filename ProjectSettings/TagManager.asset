@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ScreenWrapper
-  - ScreenWrapperL
   - ScreenWrapperR
+  - ScreenWrapperL
+  - Undefined
   - Projectile
-  - Target
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Screenwrappable
   - 
   - 
   - 

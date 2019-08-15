@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 [RequireComponent(typeof(SubmarineFire))]
 [RequireComponent(typeof(SubmarineMovement))]
@@ -42,11 +43,29 @@ public class Submarine : Ship
         // scale the submarine
         // transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
+        readFile();
+
         setWeapon(ship);
         setHull(hull);
         setPropulsion(prop);
 
         base.Initialize();
+    }
+
+    public void readFile()
+    {
+        string savePath = Application.dataPath + "/save/save.txt";
+        string contents;
+        string[] results;
+        if (File.Exists(savePath))
+        {
+            contents = File.ReadAllLines(savePath)[0];
+            results = contents.Split(',');
+            ship = int.Parse(results[0]);
+            hull = int.Parse(results[1]);
+            prop = int.Parse(results[2]);
+            //file.Close();
+        }
     }
 
     // weapon is from 1 - 3
@@ -99,7 +118,6 @@ public class Submarine : Ship
         GetComponent<SubmarineMovement>().setSpeed(speed);
         GetComponent<SubmarineMovement>().setHandling(handling);
         ShipsHealth = health * 25 + 100;
-
         //GetComponent<SubmarineFire>().projectileIndex = GetShipComponent("weapon").index;
 
     }
