@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{cdac612a-e7b0-429b-9f94-12fbb7dc9f51}">
+        <property name="assetPath">
+            <value>SFX/Hit_Laser.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.7348299319727891</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{ab328eb0-c9dc-411a-94e8-a237185bc753}</destination>
+        </relationship>
+    </object>
+</objects>
