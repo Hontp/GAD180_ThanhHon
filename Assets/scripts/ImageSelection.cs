@@ -8,6 +8,7 @@ public class ImageSelection : MonoBehaviour
     public Image SelectionImage;
     public List<Sprite> ItemList = new List<Sprite>();
     public int itemSpot;
+    SoundManager _soundManager;
 
     public void RightSelection()
     {
@@ -17,6 +18,7 @@ public class ImageSelection : MonoBehaviour
             itemSpot++;
             SelectionImage.sprite = ItemList[itemSpot];
             Debug.Log(itemSpot + " " + ItemList[itemSpot].name);
+            _soundManager._menuClick.start();
         }
     }
 
@@ -28,6 +30,7 @@ public class ImageSelection : MonoBehaviour
             itemSpot--;
             SelectionImage.sprite = ItemList[itemSpot];
             Debug.Log(itemSpot + " " + ItemList[itemSpot].name);
+            _soundManager._menuClick.start();
         }
     }
 
@@ -37,7 +40,7 @@ public class ImageSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame

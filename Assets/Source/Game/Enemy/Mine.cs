@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mine : Agent
 {
     public GameObject mineExplode;
-    public SoundManager _soundManager;
+    private SoundManager _soundManager;
 
     [SerializeField]
     Aggro current;

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager instance;
     public bool _moving;
     public bool _firing;
     public bool _playerCollide;
@@ -19,6 +18,10 @@ public class SoundManager : MonoBehaviour
     private string[] _projectileList = new string[3];
     private int _projectileType;
     public float _healthCount;
+    public bool _clicked;
+    public bool _menuContinue;
+    public bool _menuConclude;
+    public bool _musicPlaying;
 
     FMOD.Studio.EventInstance _music;
     FMOD.Studio.EventInstance _playerProp;
@@ -26,18 +29,14 @@ public class SoundManager : MonoBehaviour
     FMOD.Studio.EventInstance[] _collisionType = new FMOD.Studio.EventInstance[3];
     FMOD.Studio.EventInstance _lowHealth;
     FMOD.Studio.EventInstance _playerDeath;
+    public FMOD.Studio.EventInstance _menuClick;
+    public FMOD.Studio.EventInstance _menuExit;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        DontDestroyOnLoad(gameObject);
     }
+
 
     //Everything Else
     void Start()
@@ -48,6 +47,7 @@ public class SoundManager : MonoBehaviour
         WeaponSet();
         CollisionSet();
         HealthSet();
+        MenuSet();
     }
     void Update()
     {
@@ -57,13 +57,18 @@ public class SoundManager : MonoBehaviour
         WeaponCheck();
         CollisionCheck();
         //HealthCheck();
+        //MenuCheck();
     }
 
     //Music
     void MusicSet()
     {
-        _music = FMODUnity.RuntimeManager.CreateInstance("event:/AdapMusic/Combat");
-        _music.start();
+        if (!_musicPlaying)
+        {
+            _music = FMODUnity.RuntimeManager.CreateInstance("event:/AdapMusic/Combat");
+            _music.start();
+            _musicPlaying = true;
+        }
     }
     void MusicCheck()
     {
@@ -189,4 +194,47 @@ public class SoundManager : MonoBehaviour
             _playerDeath.start();
         }
     }
+
+    void MenuSet()
+    {
+        _menuClick = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI_Click");
+        _menuExit = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI_Finish");
+        _clicked = false;
+    }
+
+    public void MenuClick()
+    {
+        _menuClick.start();
+    }
+
+    public void MenuClose()
+    {
+        _menuExit.start();
+    }
+
+    /*
+    void MenuCheck()
+    {
+        if (_clicked)
+        {
+            if(_menuContinue)
+            {
+                _menuClick.start();
+                _clicked = false;
+            }
+            else if (_menuConclude)
+            {
+                _menuExit.start();
+                _clicked = false;
+            }
+            else
+            {
+                _clicked = false;
+            }
+        }
+        else
+        {
+
+        }
+    }*/
 }

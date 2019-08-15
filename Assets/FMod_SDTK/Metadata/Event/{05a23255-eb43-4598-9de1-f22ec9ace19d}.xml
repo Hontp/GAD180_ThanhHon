@@ -106,6 +106,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{76ee2c2b-4d70-4c50-b8eb-1683eb8019a9}">
+        <property name="volume">
+            <value>-6</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -190,6 +193,9 @@
     </object>
     <object class="MixerBusFader" id="{63d960e7-5340-4210-84dd-3f1f33e34e76}"/>
     <object class="SFXReverbEffect" id="{885b3782-aa44-4e2b-a16e-2bd72dc26aef}">
+        <property name="decayTime">
+            <value>900</value>
+        </property>
         <property name="earlyDelay">
             <value>0</value>
         </property>

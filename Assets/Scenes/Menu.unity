@@ -212,6 +212,17 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: _menuContinue = true;
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2030991406}
+        m_MethodName: MenuClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -267,6 +278,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene: Hanger
+  sub: {fileID: 0}
+  p: {fileID: 0}
+  w: {fileID: 0}
+  h: {fileID: 0}
 --- !u!114 &19754175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +295,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene: 
+  sub: {fileID: 0}
+  p: {fileID: 0}
+  w: {fileID: 0}
+  h: {fileID: 0}
 --- !u!1 &117845990
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +454,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
@@ -444,14 +462,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,6 +702,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1896541054832187339, guid: ba0b4c702f2701644b167f66c43ece73,
+          type: 3}
+        m_MethodName: MenuClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1059535536
@@ -744,6 +766,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene: SDTK
+  sub: {fileID: 0}
+  p: {fileID: 0}
+  w: {fileID: 0}
+  h: {fileID: 0}
 --- !u!1 &1115182938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,13 +1120,97 @@ RectTransform:
   - {fileID: 1795317631}
   - {fileID: 909058134}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1729638117
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5170099001060902206, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1552.6204
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 767.42316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -687.6873
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693051971116710182, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896541054832187339, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: _clicked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896541054832187339, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: _menuContinue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174621366170370369, guid: ba0b4c702f2701644b167f66c43ece73,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba0b4c702f2701644b167f66c43ece73, type: 3}
 --- !u!1 &1795317630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,6 +1379,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1896541054832187339, guid: ba0b4c702f2701644b167f66c43ece73,
+          type: 3}
+        m_MethodName: MenuClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2025973231
@@ -1321,3 +1443,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene: ExitGame
+  sub: {fileID: 0}
+  p: {fileID: 0}
+  w: {fileID: 0}
+  h: {fileID: 0}
+--- !u!114 &2030991406 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1896541054832187339, guid: ba0b4c702f2701644b167f66c43ece73,
+    type: 3}
+  m_PrefabInstance: {fileID: 1729638117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a8cde253ddad64290b9f1e229d572d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
