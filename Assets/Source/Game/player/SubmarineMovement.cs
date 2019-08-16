@@ -180,7 +180,7 @@ public class SubmarineMovement : MonoBehaviour
                         col.GetComponent<ScreenWrapper>().parentToPlayer(transform);
                     }
                 }
-                transform.position = new Vector3(transform.position.x - worldWidth, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x + worldWidth, transform.position.y, transform.position.z);
                 foreach (Collider2D col in colList)
                 {
                     if (col.gameObject.layer == LayerMask.NameToLayer("Screenwrappable"))
