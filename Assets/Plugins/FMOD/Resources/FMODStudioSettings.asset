@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:/Users/sstanford/Desktop/FMod_SDTK/FMod_SDTK.fspro
-  SourceBankPathUnformatted: C:/Users/sstanford/Desktop/FMod_SDTK/Build
+  sourceProjectPath: Assets/FMod_SDTK/FMod_SDTK.fspro
+  SourceBankPathUnformatted: Assets/FMod_SDTK/Build
   AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
@@ -75,7 +75,8 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master Bank
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

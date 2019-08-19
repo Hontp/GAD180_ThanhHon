@@ -10,14 +10,14 @@ public class SoundManager : MonoBehaviour
     public bool _firing;
     public bool _playerCollide;
     public bool _enemyCollide;
-    public int _enemyCount;
-    public int _playerWeapon;
+    public int _enemyCount = 0;
+    public int _playerWeapon = 0;
     public int _playerCollision;
     public int _enemyCollision;
     public string _projectileAssignment;
     private string[] _projectileList = new string[3];
     private int _projectileType;
-    public float _healthCount;
+    public float _healthCount = 10;
     public bool _clicked;
     public bool _menuContinue;
     public bool _menuConclude;
@@ -43,17 +43,18 @@ public class SoundManager : MonoBehaviour
     {
         MusicSet();
         MoveSet();
-        ProjectileTypeSet();
+        //ProjectileTypeSet();
         WeaponSet();
         CollisionSet();
-        HealthSet();
+        //HealthSet();
         MenuSet();
     }
     void Update()
     {
+        MusicAdapt();
         MusicCheck();
         MoveCheck();
-        ProjectileTypeCheck();
+        //ProjectileTypeCheck();
         WeaponCheck();
         CollisionCheck();
         //HealthCheck();
@@ -75,6 +76,10 @@ public class SoundManager : MonoBehaviour
         if (_enemyCount > 10)
         {
             _enemyCount = 10;
+        }
+        if (_healthCount < 0)
+        {
+            _healthCount = 0;
         }
         _music.setParameterByName("Enemies", _enemyCount);
         _lowHealth.setParameterByName("Health", _healthCount);
@@ -102,9 +107,9 @@ public class SoundManager : MonoBehaviour
     //ProjectileTypeSet
     void ProjectileTypeSet()
     {
-        _projectileList[0] = "Bullet";
+        _projectileList[0] = "Torpedo";
         _projectileList[1] = "Laser";
-        _projectileList[2] = "Torpedo";
+        _projectileList[2] = "Bullet";
         _projectileAssignment = _projectileList[0];
     }
     void ProjectileTypeCheck()
@@ -131,9 +136,9 @@ public class SoundManager : MonoBehaviour
     //Player Weapons
     void WeaponSet()
     {
-        _weaponType[0] = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Weap_Bullet");
+        _weaponType[0] = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Weap_Torp");
         _weaponType[1] = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Weap_Laser");
-        _weaponType[2] = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Weap_Torp");
+        _weaponType[2] = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Weap_Bullet");
     }
     void WeaponCheck()
     {
@@ -237,4 +242,24 @@ public class SoundManager : MonoBehaviour
 
         }
     }*/
+
+    void MusicAdapt()
+    {
+        if (Input.GetKeyDown("up"))
+        {
+            _enemyCount++;
+        }
+        else if (Input.GetKeyDown("down"))
+        {
+            _enemyCount--;
+        }
+        else if (Input.GetKeyDown("right"))
+        {
+            _healthCount++;
+        }
+        else if (Input.GetKeyDown("left"))
+        {
+            _healthCount--;
+        }
+    }
 }

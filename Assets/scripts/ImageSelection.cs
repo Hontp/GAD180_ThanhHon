@@ -18,6 +18,7 @@ public class ImageSelection : MonoBehaviour
             itemSpot++;
             SelectionImage.sprite = ItemList[itemSpot];
             Debug.Log(itemSpot + " " + ItemList[itemSpot].name);
+            //Debug.Log(itemSpot + " = THIS ONE!!");
             _soundManager._menuClick.start();
         }
     }
@@ -47,5 +48,10 @@ public class ImageSelection : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void WeaponSelect()
+    {
+        _soundManager._playerWeapon = itemSpot;
     }
 }
