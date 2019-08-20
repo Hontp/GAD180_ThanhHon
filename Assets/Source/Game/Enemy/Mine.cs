@@ -85,11 +85,9 @@ public class Mine : Agent
     public override void Move(Vector2 target, float distance)
     {
 
-        //transform.position = Vector2.MoveTowards(transform.position, target, distance * speed * Time.deltaTime);
-        if(rb.IsAwake())
-        {
-            rb.MovePosition(Vector2.MoveTowards(transform.position, target, distance * speed * Time.deltaTime));
-        }
+
+        rb.MovePosition(Vector2.MoveTowards(transform.position, target, distance * speed * Time.deltaTime));
+       
 
         base.Move(target, distance);
     }
